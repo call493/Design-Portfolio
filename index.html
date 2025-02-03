@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Braxton's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaqueries.css">
+</head>
+<body bgcolor="#070707">
+
+    <div class="intro">
+        <h1 class="logo-header">
+            <span class="intro-logo">B</span>
+            <span class="intro-logo">R</span>
+            <span class="intro-logo">A</span>
+            <span class="intro-logo">X</span>
+            <span class="intro-logo">T</span>
+            <span class="intro-logo">O</span>
+            <span class="intro-logo">N</span>
+        </h1>
+    </div>
+
+    <nav id="desktop-nav" class="bgcolor">
+        <div class="logo"><img src="./Assets/Bhavya.png"
+            alt="Bhavya" onclick="location.href='./#profile'">
+        </div>
+        <div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <nav id="hamburger-nav">
+        <div class="logo">Mandara</div>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="togglemenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links" onclick="togglemenu()">
+                <li><a href="#about" onclick="togglemenu()">About</a></li>
+                <li><a href="#skills" onclick="togglemenu()">Skills</a></li>
+                <li><a href="#projects" onclick="togglemenu()">Projects</a></li>
+                <li><a href="#contact" onclick="togglemenu()">Contact</a></li>
+            </div>
+        </div>
+    </nav>
+
+    <section id="profile">
+        <div class="section__pic-container">
+            <img class="home-pic"
+            src="./Assets/me.jpg" alt="Bhavya Parmar">
+        </div>
+        <div class="section__text" class="show">
+            <p class="section__text__p1">Hello there, I'm</p>
+            <h1 class="title">Braxton Mandara</h1>
+            <p class="section__text__p2">Graphic Designer, UI/UX Designer,<br> Web Developer  &  Video Editor</p>
+            <div class="btn-container">
+                <button class="btn btn-color-2"
+                onclick="window.open('./Assets/Braxton Mandara CV-1.pdf')"
+                >
+                My Resume
+                </button>
+                <button class="btn btn-color-1"
+                onclick="location.href='./#contact'">
+                Get in touch
+                </button>
+            </div>
+            <div id="socials-container">
+                <img src='./Assets/linkedin.png' alt="My LinkedIn Profile"
+                class="icon" onclick="location.href='https://www.linkedin.com/in/bhavya-parmar/'">
+                <img src='./Assets/insta.png' alt="My Instagram Handle"
+                class="icon" onclick="location.href='https://www.instagram.com/bhavyeahhh_/'">
+                </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <p class="section__text">Get To Know</p>
+        <h1 class="title2">About Me</h1>
+        <div class="section-container">
+            <div class="section__pic-container">
+                <img src="./Assets/me2.jpg"
+                alt="Bhavya Parmar Profile Picture"
+                class="about-pic">
+            </div>
+            <div class="about-details-container">
+                <div class="about-containers">
+                    <div class="details-container">
+                        <img src="./Assets/experience.png"
+                        alt="experience icon" class="icon">
+                        <h3 class="about-headings">Experience</h3>
+                        <p><b>2+ years</b><br>Graphic Designing<br>Video Editing<br>UI/UX Designing<br>Web development</p>
+                    </div>
+                    <div class="details-container">
+                        <img src="./Assets/graduation.png"
+                        alt="education icon" class="icon">
+                        <h3 class="about-headings">Education</h3>
+                        <p><b>Dedan Kimathi University of Technology, Nyeri</b>
+                        <br>B.Sc. - Computer Science<br>
+                        2024</p>
+                    </div>
+                </div>
+                <div class="text-container">
+                    <p>
+                        I'm a graduate from Dedan Kimathi University of Technology, a Principal Partner at Avalanche Revamp and a Web Experience Designer and Developer at DSAIL. With four years of 
+                        experience in graphic design and video editing, I am proficient 
+                        in Adobe Photoshop, Illustrator, Premiere Pro, After Effects and Figma. I thrive in personal as well as
+                        collaborative projects.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <p class="section__text">Have a look at my</p>
+        <h1 class="title">Skills</h1>
+        <div class="skills-details-container">
+                <div class="sk-details-container">
+                    <h2 class="skills-subtitle">Graphic Design</h2>
+                    <div class="article-container">
+                        <article>
+                            <img src="./Assets/checkmark.png" alt="skills checkmark"
+                            class="icon">
+                            <div>
+                                <h3>Adobe Photoshop</h3>
+                                <p>Experienced</p>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="./Assets/checkmark.png" alt="skills checkmark"
+                            class="icon">
+                            <div>
+                                <h3>Adobe Illustrator</h3>
+                                <p>Intermediate</p>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="./Assets/checkmark.png" alt="skills checkmark"
+                            class="icon">
+                            <div>
+                                <h3>Figma</h3>
+                                <p>Intermediate</p>
+                            </div>
+                        </article>
+                    </div>
+                    <h2 class="skills-subtitle">Video Editing</h2>
+                    <div class="article-container">
+                        <article>
+                            <img src="./Assets/checkmark.png" alt="skills checkmark"
+                            class="icon">
+                            <div>
+                                <h3>Adobe Premiere Pro</h3>
+                                <p>Experienced</p>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="./Assets/checkmark.png" alt="skills checkmark"
+                            class="icon">
+                            <div>
+                                <h3>Adobe After Effects</h3>
+                                <p>Intermediate</p>
+                            </div>
+                        </article>
+                    </div>           
+                </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <p class="section__text">Explore my</p>
+        <h1 class="title">Work</h1>
+        <div class="work-list">
+            <a href="./Assets/Heaven.png"><div class="work">
+                <img src="./Assets/Heaven.png" alt="The Door To Heaven">
+                <div class="layer">
+                    <h3>The Door To Heaven</h3>
+                </div>
+            </div></a>
+            <a href="./Assets/Sukoon.png"><div class="work">
+                <img src="./Assets/Sukoon.png" alt="Sukoon">
+                <div class="layer">
+                    <h3>Sukoon</h3>
+                </div>
+            </div></a>
+            <a href="./Assets/Falling.png"><div class="work">
+                <img src="./Assets/Falling.png" alt="Falling - Light">
+                <div class="layer">
+                    <h3>Falling - Light</h3>
+                </div>
+            </div></a>
+            
+        </div>
+
+            </div>
+        </div>
+        <a href="projects.html">
+        <button class="btn btn-color-2">
+                See more
+            </button></a>
+    </section>
+
+    <section id="contact">
+        <p class="section__text" style="padding-bottom: 0.3rem;">Get In Touch</p>
+        <h1 class="title" style="font-weight: 600;">Contact Me</h1>
+        <div class="contact-info-upper-container">
+            <div class="contact-info-container">
+                <a href="mailto:23110059@iitgn.ac.in">
+                    <img src="./Assets/email.png" alt="Email icon"
+                    class="icon contact-icon">
+                    <p>braxtonmandara254@gmail.com</p>
+                </a>
+            </div>
+            <div class="contact-info-container">
+            <a href="https://www.linkedin.com/in/bhavya-parmar/">
+                <img src="./Assets/linkedin.png" alt="LinkedIn" 
+                class="icon contact-icon">
+                <p>Connect with me on LinkedIn</p>
+            </a>
+            </div>
+            <div class="contact-info-container">
+            <a href="https://www.instagram.com/brax.media/">
+                <img src='./Assets/insta.png' alt="My Instagram Handle" 
+                class="icon contact-icon">
+                <p>DM me on Instagram</p>
+            </a>
+            </div>
+        </div>
+        <div class="logo"><img src="./Assets/Bhavya.png"
+            alt="Bhavya" onclick="location.href='./#profile'">
+        </div> 
+    </section>
+
+    <footer>
+        <nav>
+            <div class="nav-links-container2">
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                </ul>
+            </div>
+        </nav><br>
+        <p>Copyright &#169; 2024 Braxton Mandara. All Rights Resereved.</p>
+    </footer>
+
+   <script defer src="script.js"></script> 
+</body>
+</html>

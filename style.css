@@ -1,0 +1,792 @@
+/*GENERAL*/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@font-face {
+    font-family: myfont;
+    src: url("./Assets/BrittanySignature.ttf") format("ttf");
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {   
+    font-family: "Montserrat", "Poppins" ;
+    background-color: #0e0e0e;
+
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+p {
+    color: rgb(128, 128, 128);
+}
+
+/* INTRO SCREEN */
+
+.intro{
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #0c0c0c;
+    transition: 1s;
+}
+
+.logo-header {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #d2cdc1;
+}
+
+.intro-logo {
+    position: relative;
+    display: inline-block;
+    bottom: -25px;
+    opacity: 0;
+    font-weight: 300;
+    font-family: 'Montserrat';
+}
+
+.intro-logo.active {
+    bottom: 0;
+    opacity: 1;
+    transition: ease-in-out 0.5s;
+}
+
+.intro-logo.fade {
+    bottom: 150px;
+    opacity: 0;
+    transition: ease-in-out 0.5s;
+}
+
+
+/*TRANSITION*/
+
+a, .btn {
+  transition: all 300ms ease;  
+}
+
+/*DESKTOP NAV*/
+
+#desktop-nav {
+    display: flex;
+    width: 90%;
+    
+    position: absolute;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    padding: 0 5%;
+    z-index: 1;
+
+    /* transition: all 300ms ease; */
+}
+
+/* .bgcolor {
+    background-color:none;
+    transition: all 300ms ease;
+} */
+
+
+.nav-links {
+    gap: 4rem;
+    list-style: none;
+    font-size: 1.2rem;
+    margin-top: 0.3rem;
+
+}
+
+a {
+    color: #d2cdc1;
+    text-decoration: none;
+    text-decoration-color: #141414;
+}
+
+nav a:hover {
+    color: purple;
+    text-decoration: underline;
+    text-underline-offset: 0.8rem;
+}
+
+#desktop-nav .logo {
+    display: flex;
+    height: 65px;
+    width: 105px;
+    margin-top: 0.5rem;
+    padding-left: 10px;
+}
+
+.logo:hover {
+    cursor: pointer;
+}
+
+/*HAMBURGER NAV*/
+
+
+#hamburger-nav, .nav-links {
+    display: flex;
+}
+
+#hamburger-nav {
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    padding-left: 5rem;
+    padding-right: 6rem;
+    position: absolute;
+    background-color: transparent;
+    color: transparent;
+    z-index: 1;
+}
+
+#hamburger-nav {
+    display: none;
+}
+
+.hamburger-menu {
+    position: relative;
+    display: inline-block;
+}
+
+.hamburger-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 24px;
+    width: 30px;
+    cursor: pointer;
+}
+
+.hamburger-icon span {
+    width: 100%;
+    height: 2px;
+    background-color: #d2cdc1;
+    transition: all 0.3 ease-in-out;
+}
+
+.menu-links {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #141414;
+    width: fit-content;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3 ease-in-out;
+}
+
+.menu-links a {
+    display: block;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.5rem;
+    color: #d2cdc1;
+    text-decoration: none;
+    transition: all 0.3 ease-in-out;
+}
+
+.menu-links li {
+    list-style: none;
+}
+
+.menu-links.open {
+    max-height: 300px;
+}
+
+.hamburger-icon.open span:first-child {
+    transform: rotate(45deg) translate(10px,5px);
+}
+
+.hamburger-icon.open span:nth-child(2) {
+    opacity: 0;;
+}
+
+.hamburger-icon.open span:last-child {
+    transform: rotate(-45deg) translate(10px,-5px);
+}
+
+.hamburger-icon span:first-child {
+    transform: none;
+}
+
+.hamburger-icon span:first-child {
+    opacity: 1;
+}
+
+.hamburger-icon span:first-child {
+    transform: none;
+}
+
+/*SECTIONS*/
+
+section {
+    padding-top: 4vh;
+    height: 96vh;
+    box-sizing: border-box;
+    min-height: fit-content;
+}
+
+.section-container {
+    display: flex;
+}
+
+/*PROFILE SECTION*/
+
+#profile {
+    padding-top: 3.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 10rem;
+    height: 100vh;
+    background-color: #0a0a0a;
+    background-image: url('./Assets/mypic.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-blend-mode: overlay;
+    background-size: 105%;
+}
+
+
+
+.home-pic {
+    display: flex;
+    height: 400px;
+    width: 400px;
+    margin: 9.4rem 0;
+    border-radius: 50%;
+    box-shadow: 0 0 25px rgba(0, 0, 0,0.4);
+}
+
+.section__text {
+    align-self: center;
+    text-align: center;
+    opacity: 0;
+    transition: all 800ms;
+    filter: blur(5px);
+}
+
+.show{
+    opacity: 1;
+    filter: blur(0);
+
+}
+
+.section__text p {
+    color: #a9a69e;
+    text-shadow: 0 0 20px rgba(0,0,0, 0.744);
+}
+
+.section__text__p1 {
+    font-weight: 600;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 0.4rem;
+    margin-top: 0.7rem;
+}
+
+.section__text__p2 {
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+    font-size: 1.2rem;
+}
+
+.title {
+    font-weight: 700;
+    font-size: 3rem;
+    text-align: center;
+    color: #efebe2;
+    margin-bottom: 0.6rem;
+    text-shadow: 0 0 20px rgba(0,0,0, 0.744);
+    letter-spacing: 0.05rem;
+}
+
+#socials_container {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    gap: 1rem;
+}
+
+/*ICONS*/
+
+.icon {
+    cursor: pointer;
+    height: 2rem;
+    margin-top: 1rem;
+    text-shadow: 0 0 20px rgba(0,0,0, 0.8);
+    padding-inline: 5px;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    transition-delay: 1s;
+}
+
+.btn {
+    font-weight: 600;
+    transition: all 300ms ease;
+    padding: 1rem;
+    width: 8rem;
+    border-radius: 2rem;
+    margin-top: 1.4rem;   
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    text-shadow: 0 0 20px rgba(0,0,0, 0.8);
+}
+
+.btn-color-1, .btn-color-2 {
+    border: #d2cdc1 0.1rem solid;
+}
+.btn-color-2 {
+    color: #d2cdc1;
+}
+
+.btn-color-1:hover, .btn-color-2:hover {
+    cursor: pointer;
+}
+
+.btn-color-2:hover {
+    background: none;
+    color: purple;
+    border: purple 0.1rem solid;
+    box-shadow: 0 0 20px rgba(128,0,128,0.3);
+}
+
+.btn-color-1:hover {
+    background: purple;
+    color: #d2cdc1;
+    border: purple;
+    box-shadow: 0 0 20px rgba(128,0,128,0.3);
+}
+
+.btn-color-2 {
+    background: none;
+}
+
+btn-color-2:hover {
+    border:#d2cdc1 0.1rem solid;
+}
+
+.btn-container {
+    gap: 1.5rem;
+}
+
+/*ABOUT SECTION*/
+
+#about {
+    position: relative;
+    padding-top: 3rem;
+    height: 100vh;
+    background-color: #222222;
+    background-image: url('./Assets/black.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: overlay;
+    font-family: "Poppins";
+}
+
+.title2 {
+    font-family: "Poppins", sans-serif;
+    color: #efebe2;
+    margin-top: 0.3rem;
+    font-weight: 500;
+    font-size: 3rem;
+    text-align: center;
+    text-shadow: 0 0 20px rgba(0,0,0, 0.744);
+    letter-spacing: 0.05rem;
+}
+
+.about-pic {
+    height: 400px;
+    width: 400px;
+    margin-left: 10rem;
+    margin-top: 5rem;
+    border-radius: 4rem;
+    box-shadow: 0 0 25px rgba(0, 0, 0,0.4);
+}
+
+.about-containers {
+    gap: 4rem;
+    margin-bottom: 2rem;
+    padding-left: 2rem;
+    padding-right: 11rem;
+}
+
+.about-details-container {
+    justify-content: center;
+    flex-direction: column;
+    
+}
+
+.about-containers,
+.about-details-container {
+    display: flex;
+}
+
+
+.details-container {
+    padding-bottom: 0.8rem;
+    flex: 1;
+    background: none;
+    border-radius: 2.6rem;
+    border: #070707 0.1rem solid;
+    border-color: #d2cdc1;
+    text-align: center;
+    line-height: 1.25rem;
+    transition: all 300ms ease;
+}
+
+.details-container:hover {
+    background: #0a0a0a;
+    color: purple;
+    border: purple 0.1rem solid;
+    box-shadow: 0 0 20px rgba(128,0,128,0.3);
+}
+
+.section-container {
+    gap: 4rem;
+    height: 80%;
+}
+
+
+.about-headings {
+    color: #d2cdc1;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+}
+
+.text-container {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    color: #d2cdc1;
+    padding-left: 2rem;
+    padding-right: 11rem;
+    text-align: left;
+    line-height: 1.5rem;
+
+}
+
+/*SKILLS*/
+
+#skills {
+    position: relative;
+    background-image: url(./Assets/bgpic.jpg);
+    padding: 5rem 0;
+    height: 100vh;
+    background-color: #0c0c0c;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: overlay;
+    font-family: "Poppins";
+    background-position: center;
+    background-attachment: fixed;
+    height: fit-content;
+}
+
+#skills .title{
+    font-weight: 600;
+}
+
+.skills-subtitle {
+    color: #d2cdc1;
+    font-weight: 600;
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+
+}
+
+.skills-details-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.article-container {
+    display: flex;
+    text-align: initial;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: space-evenly;
+    padding-bottom: 1rem;
+}
+
+article {
+    display: flex;
+    width: 15rem;
+    justify-content: left;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+article .icon {
+    cursor: default;
+}
+
+article h3{
+    color: #d2cdc1;
+}
+
+.sk-details-container {
+    padding-bottom: 0.8rem;
+    flex: 1;
+    background: none;
+    border-radius: 2.6rem;
+    border: #070707 0.1rem solid;
+    border-color: #d2cdc1;
+    text-align: center;
+    line-height: 1.25rem;
+    margin-left: 11%;
+    margin-right: 11%;
+    margin-top: 2rem;
+    padding-bottom: 0.7rem;
+    transition: all 300ms ease;
+}
+
+.sk-details-container:hover{
+    background: #0a0a0a;
+    color: purple;
+    border: purple 0.1rem solid;
+    box-shadow: 0 0 15px rgba(128,0,128,0.2);
+}
+
+
+
+/* PROJECTS */
+
+#projects {
+    position: relative;
+    background-image: url("./Assets/huji22.jpg");
+    background-color: #1e1e1e;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: overlay;
+    font-family: "Poppins";
+    height: fit-content;
+    padding-bottom: 3rem;
+}
+
+#projects .title {
+    font-weight: 600;
+}
+
+.work-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
+    grid-gap: 40px;
+    margin: 40px 5rem;
+}
+
+.work {
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.work img {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    aspect-ratio: 1/1;
+    transition: transform 0.3s;
+}
+
+.layer {
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0,0,0,0), #070707) ;
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    transition: height 0.3s;
+}
+
+.layer h3 {
+    color: #d2cdc1;
+    text-shadow: 0 0 40px #070707;
+    font-weight: 600;
+}
+
+
+.work img {
+    height: 430px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.work:hover img{
+    transform: scale(1.1);
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    
+}
+
+.work:hover .layer {
+    height: 100%;
+}
+
+.work:hover{
+    box-shadow:  0 0 40px rgba(0, 0, 0, 0.204);
+}
+
+#projects button {
+    margin: 3rem auto auto auto;
+    display: block;
+}
+
+
+/* CONTACT */
+
+#contact {
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 2rem;
+}
+
+.contact-info-upper-container {
+    display: inline-block;
+    justify-content: center;
+    border-radius: 4rem;
+    border: #d2cdc1 0.1rem solid;
+    margin-top: 2.6rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+    padding: 0.4rem;
+    transition: all 0.3s ease;
+}
+
+.contact-info-upper-container:hover {
+    border-color: purple;
+    box-shadow: 0 0 30px rgba(128, 0, 128, 0.14);
+}
+
+.contact-info-container {
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin: 0.05rem 1rem;
+    padding-bottom: 0.5rem;
+    width: auto;
+}
+
+.contact-info-container p {
+    display: inline-block;
+    justify-content: center;
+    vertical-align: 9px;
+}
+
+.contact-info-container img:hover {
+    color: purple;
+    fill: purple;
+}
+
+
+#contact .logo img {
+    display: flex;
+    margin-top: 1rem;
+    justify-content: center;
+    align-items: center;
+    height: 65px;
+    width: 105px;
+ 
+}
+
+/* FOOTER */
+
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+footer .nav-links-container, .nav-links {
+    padding: 0;
+    margin: auto;
+}
+footer nav{
+    padding: 0;
+}
+
+footer .nav-links-container2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin-top: 0.5rem;
+}
+
+.nav-links-container2 .nav-links{
+    padding: 0;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+footer p {
+    display: flex;
+    justify-content: center;
+    margin-top: 0.7rem;
+    padding-bottom: 1.5rem;
+    font-size: x-small;
+}
+
+
+/* ALL PROJECTS PAGE */
+
+#all-projects {
+    position: relative;
+    background-image: url("./Assets/huji25.jpg");
+    background-color: #1e1e1e;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: overlay;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: "Poppins";
+    height: auto;
+    padding-bottom: 2rem;
+}
+
+#all-projects p{
+    height: 100%;
+}
+
+
+#all-projects .title{
+    font-weight: 600;
+}
