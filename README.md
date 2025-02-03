@@ -27,7 +27,7 @@ This portfolio website is a curated collection of my graphic design. It serves a
 
 ## Demo
 
-You can view a live demo of the portfolio website [here](https://github.com/bhavya-parmar/portfolio_website.git).
+You can view a live demo of the portfolio website [here](https://github.com/call493.
 
 ## Technologies Used
 
@@ -63,7 +63,7 @@ Contributions are welcome! If you have any suggestions or improvements, please c
 
 If you have any questions or would like to get in touch, feel free to contact me:
 
-- **Email:** 23110059@iitgn.ac.in
-- **LinkedIn:** [LinkedIn](https://www.linkedin.com/in/bhavya-parmar/)
+- **Email:** braxtonmandara254@gmail.com
+- **LinkedIn:** [LinkedIn](https://www.linkedin.com
 
 Thank you for visiting my portfolio website!
