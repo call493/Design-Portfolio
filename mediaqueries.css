@@ -142,7 +142,7 @@
 
 }
 
-@media screen and (max-width: 825px){
+@media screen and (max-width: 500px){
     .about-containers .details-container {
         padding-left: 2rem;
         padding-right: 2rem;
@@ -150,7 +150,7 @@
     }
 }
 
-@media screen and (max-width: 620px){
+@media screen and (max-width: 500px){
     .work-list{
         margin: 0;
         grid-template-columns: auto;
