@@ -1,16 +1,13 @@
 # Graphic Design Portfolio Website
 
 Welcome to my portfolio website! This repository contains the source code for my personal portfolio website, showcasing my work as a graphic designer.
-This was developed by me as a part of the Metis Summer Project 2024 (IITGN's Web & App Dev Club).
 
 ## Table of Contents
 
 - [Introduction](#introduction)
 - [Features](#features)
-- [Demo](#demo)
 - [Technologies Used](#technologies-used)
 - [Installation](#installation)
-- [Contributing](#contributing)
 - [Contact](#contact)
 
 ## Introduction
