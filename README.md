@@ -50,6 +50,6 @@ To run this project locally, follow these steps:
 If you have any questions or would like to get in touch, feel free to contact me:
 
 - **Email:** braxtonmandara254@gmail.com
-- **LinkedIn:** [LinkedIn]https://www.linkedin.com/in/braxton-m
+- **LinkedIn:** https://www.linkedin.com/in/braxton-m
 
 Thank you for visiting my portfolio website!
