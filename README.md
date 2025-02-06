@@ -25,10 +25,6 @@ This portfolio website is a curated collection of my graphic design. It serves a
 - **Contact Section** Simple form to allow visitors to get in touch with me.
 - **Smooth Animations:** Modern CSS and JavaScript animations to enhance user experience.
 
-## Demo
-
-You can view a live demo of the portfolio website [here](https://github.com/call493.
-
 ## Technologies Used
 
 - **HTML5:** Structure of the website.
@@ -41,7 +37,7 @@ To run this project locally, follow these steps:
 
 1. **Clone the repository:**
     ```sh
-    git clone https://github.com/bhavya-parmar/portfolio_website.git
+    git clone https://github.com/call493/Design-Portfolio.git
     ```
 2. **Navigate to the project directory:**
     ```sh
@@ -49,21 +45,11 @@ To run this project locally, follow these steps:
     ```
 3. **Open `index.html` in your preferred web browser.**
 
-## Contributing
-
-Contributions are welcome! If you have any suggestions or improvements, please create an issue or submit a pull request.
-
-1. Fork the repository.
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`).
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`).
-4. Push to the branch (`git push origin feature/AmazingFeature`).
-5. Open a pull request.
-
 ## Contact
 
 If you have any questions or would like to get in touch, feel free to contact me:
 
 - **Email:** braxtonmandara254@gmail.com
-- **LinkedIn:** [LinkedIn](https://www.linkedin.com
+- **LinkedIn:** [LinkedIn]https://www.linkedin.com/in/braxton-m
 
 Thank you for visiting my portfolio website!
