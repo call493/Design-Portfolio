@@ -139,6 +139,30 @@
         grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
         padding: 0 5%;
     }
+    .services-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .showreel-grid {
+        grid-template-columns: 1fr;
+        gap: 2.2rem;
+    }
+    .showreel-media {
+        max-width: 520px;
+        margin: 0 auto;
+    }
+    .showreel-button {
+        width: 100%;
+        margin: 0 0 1.8rem;
+    }
+    .case-study-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .case-study-image {
+        height: 260px;
+    }
+    .testimonial-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
 
 }
 
@@ -155,11 +179,19 @@
         margin: 0;
         grid-template-columns: auto;
     }
+    .services-grid,
+    .case-study-grid,
+    .testimonial-grid {
+        grid-template-columns: 1fr;
+    }
     section{
         width: auto;
         margin-left: 0;
         margin-right: 0;
-        padding: 3%;
+        padding: 3rem 1.5rem;
+    }
+    #profile {
+        padding: 6rem 1.5rem 3rem;
     }
     #contact{
         margin-top: 1rem;
