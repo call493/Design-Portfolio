@@ -248,11 +248,12 @@ section {
 /*PROFILE SECTION*/
 
 #profile {
-    padding-top: 3.5rem;
+    padding: 8rem 5% 6rem;
     display: flex;
     justify-content: center;
-    gap: 10rem;
-    height: 100vh;
+    gap: 6rem;
+    min-height: calc(100vh - 80px);
+    height: auto;
     background-color: #0a0a0a;
     background-image: url('./Assets/mypic.jpg');
     background-size: cover;
