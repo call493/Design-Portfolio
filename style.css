@@ -471,6 +471,10 @@ section {
     color: #a9a69e;
 }
 
+.showreel-highlights li {
+    line-height: 1.75;
+}
+
 .showreel-highlights li strong {
     color: #d2cdc1;
     font-weight: 600;
@@ -551,8 +555,12 @@ section {
     margin: 0;
     display: flex;
     flex-direction: column;
-    gap: 0.7rem;
+    gap: 0.9rem;
     color: #a9a69e;
+}
+
+.case-study-list li {
+    line-height: 1.75;
 }
 
 .case-study-list li strong {
