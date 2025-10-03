@@ -15,9 +15,9 @@
     padding: 0;
 }
 
-body {   
+body {
     font-family: "Montserrat", "Poppins" ;
-    background-color: #0e0e0e;
+    background-color: #070707;
 
 }
 
@@ -671,6 +671,14 @@ article h3{
     flex-direction: column;
     align-items: center;
     padding-bottom: 2rem;
+}
+
+.contact-intro-label {
+    padding-bottom: 0.3rem;
+}
+
+.contact-title-emphasis {
+    font-weight: 600;
 }
 
 .contact-info-upper-container {
