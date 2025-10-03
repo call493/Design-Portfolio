@@ -586,6 +586,10 @@ section {
     margin-top: 3rem;
 }
 
+.project-archive-grid {
+    margin-top: 4rem;
+}
+
 .testimonial-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
