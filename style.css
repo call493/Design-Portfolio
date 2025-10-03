@@ -486,6 +486,9 @@ section {
     letter-spacing: 0.04rem;
     text-transform: uppercase;
     font-size: 0.95rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
 }
 
 .showreel-contact:hover {
