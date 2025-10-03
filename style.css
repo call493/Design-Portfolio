@@ -377,16 +377,24 @@ section {
     list-style: none;
     display: flex;
     flex-direction: column;
-    gap: 0.6rem;
+    gap: 0.8rem;
     padding: 0;
     margin: 0;
     color: #a9a69e;
 }
 
+.service-list li {
+    position: relative;
+    padding-left: 1.4rem;
+    line-height: 1.75;
+}
+
 .service-list li::before {
     content: "•";
     color: purple;
-    margin-right: 0.7rem;
+    position: absolute;
+    left: 0;
+    top: 0.1rem;
 }
 
 .showreel-grid {
