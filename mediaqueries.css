@@ -138,6 +138,15 @@
         grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
         padding: 0 5%;
     }
+    .hero-focus {
+        padding: 2rem;
+    }
+    .hero-focus-controls {
+        grid-template-columns: 1fr 1fr;
+    }
+    .hero-focus-panels {
+        grid-template-columns: 1fr 1fr;
+    }
     .services-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
@@ -178,10 +187,24 @@
         margin: 0;
         grid-template-columns: auto;
     }
+    .hero-focus {
+        padding: 1.8rem;
+    }
+    .hero-focus-controls {
+        grid-template-columns: 1fr;
+    }
+    .hero-focus-panels {
+        grid-template-columns: 1fr;
+    }
     .services-grid,
     .case-study-grid,
     .testimonial-grid {
         grid-template-columns: 1fr;
+    }
+    .showreel-timeline {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
     }
     section{
         width: auto;
