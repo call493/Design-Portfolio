@@ -1269,13 +1269,37 @@ article h3{
 }
 
 .contact-info-container {
-    display: inline-block;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 1rem;
     margin: 0.05rem 1rem;
     padding-bottom: 0.5rem;
     width: auto;
+}
+
+.contact-copy {
+    border: 1px solid rgba(210, 205, 193, 0.4);
+    background: transparent;
+    color: #d2cdc1;
+    border-radius: 999px;
+    padding: 0.35rem 1.1rem;
+    font-size: 0.85rem;
+    letter-spacing: 0.05rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: background 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+.contact-copy.is-copied {
+    background: purple;
+    border-color: purple;
+    color: #f9f6f0;
+}
+
+.contact-copy:focus-visible {
+    outline: 2px solid #f9f6f0;
+    outline-offset: 2px;
 }
 
 .contact-info-container p {
