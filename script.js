@@ -95,6 +95,9 @@ function initHeroFocus() {
         });
     };
 
+    const defaultFocus = document.querySelector('.hero-focus-control.is-active')?.dataset.focus || controls[0].dataset.focus;
+    activate(defaultFocus);
+
     controls.forEach((button) => {
         button.addEventListener('click', () => {
             activate(button.dataset.focus);
