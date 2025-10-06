@@ -147,6 +147,14 @@ function initServiceAccordions() {
     };
 
     toggles.forEach((button) => {
+        if (button.getAttribute('aria-expanded') === 'true') {
+            expand(button);
+        } else {
+            collapse(button);
+        }
+    });
+
+    toggles.forEach((button) => {
         button.addEventListener('click', () => {
             const isExpanded = button.getAttribute('aria-expanded') === 'true';
             toggles.forEach((other) => {
