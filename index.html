@@ -131,33 +131,60 @@
     <section id="niche-services">
         <p class="section__text">Signature Services</p>
         <h2 class="title">End-to-end brand, product, and motion support</h2>
-        <div class="services-grid">
-            <article class="service-card">
-                <h3 class="service-title">Identity Systems & Brand Kits</h3>
+        <div class="services-grid" role="list">
+            <article class="service-card" data-service="brand" role="listitem">
+                <header class="service-card-header">
+                    <h3 class="service-title">Identity Systems & Brand Kits</h3>
+                    <button class="service-toggle" type="button" aria-expanded="true" aria-controls="service-panel-brand">View process</button>
+                </header>
                 <p class="service-summary">Naming, messaging, and visual language for founders launching or refreshing their presence.</p>
-                <ul class="service-list">
-                    <li>Logo suites, type pairings, and color governance</li>
-                    <li>Messaging pillars and voice guidelines</li>
-                    <li>Launch assets for socials and investor decks</li>
-                </ul>
+                <div class="service-body" id="service-panel-brand">
+                    <ul class="service-list">
+                        <li>Logo suites, type pairings, and color governance</li>
+                        <li>Messaging pillars and voice guidelines</li>
+                        <li>Launch assets for socials and investor decks</li>
+                    </ul>
+                    <div class="service-metrics">
+                        <p><span>Launch timeline:</span> 3–5 weeks</p>
+                        <p><span>Ideal for:</span> Seed to Series A startups refreshing brand presence</p>
+                    </div>
+                </div>
             </article>
-            <article class="service-card">
-                <h3 class="service-title">Product UI/UX & Webflow Builds</h3>
+            <article class="service-card" data-service="product" role="listitem">
+                <header class="service-card-header">
+                    <h3 class="service-title">Product UI/UX & Webflow Builds</h3>
+                    <button class="service-toggle" type="button" aria-expanded="false" aria-controls="service-panel-product">View process</button>
+                </header>
                 <p class="service-summary">Design mobile-first product flows and marketing sites that express the brand story with clarity.</p>
-                <ul class="service-list">
-                    <li>Heuristic audits, journey maps, and wireframes</li>
-                    <li>High-fidelity design systems in Figma</li>
-                    <li>Webflow implementation with responsive QA</li>
-                </ul>
+                <div class="service-body" id="service-panel-product" hidden>
+                    <ul class="service-list">
+                        <li>Heuristic audits, journey maps, and wireframes</li>
+                        <li>High-fidelity design systems in Figma</li>
+                        <li>Webflow implementation with responsive QA</li>
+                    </ul>
+                    <div class="service-metrics">
+                        <p><span>Launch timeline:</span> 4–6 weeks</p>
+                        <p><span>Ideal for:</span> SaaS or community platforms prepping for public launch</p>
+                    </div>
+                </div>
             </article>
-            <article class="service-card">
-                <h3 class="service-title">Motion & Video Campaigns</h3>
+            <article class="service-card" data-service="motion" role="listitem">
+                <header class="service-card-header">
+                    <h3 class="service-title">Motion & Video Campaigns</h3>
+                    <button class="service-toggle" type="button" aria-expanded="false" aria-controls="service-panel-motion">View process</button>
+                </header>
                 <p class="service-summary">Script-to-screen editing that translates strategy into energetic launch content.</p>
-                <ul class="service-list">
-                    <li>Storyboarding and asset prep for edit sessions</li>
-                    <li>Color, sound, and motion graphics polish</li>
-                    <li>Deliverables for organic, paid, and event screens</li>
-                </ul>
+                <div class="service-body" id="service-panel-motion" hidden>
+                    <ul class="service-list">
+                        <li>Storyboarding and asset prep for edit sessions</li>
+                        <li>Color, sound, and motion graphics polish</li>
+                        <li>Deliverables for organic, paid, and event screens</li>
+                    </ul>
+                    <div class="service-metrics">
+                        <p><span>Launch timeline:</span> 2–4 weeks</p>
+                        <p><span>Ideal for:</span> Product drops, conference recaps, and fundraising campaigns</p>
+                    </div>
+                </div>
             </article>
         </div>
     </section>
