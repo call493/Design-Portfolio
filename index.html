@@ -316,8 +316,14 @@
     <section id="projects">
         <p class="section__text">Selected Case Studies</p>
         <h1 class="title">Recent collaborations</h1>
+        <div class="case-filter" role="tablist" aria-label="Filter case studies">
+            <button class="case-filter-button is-active" type="button" role="tab" aria-selected="true" data-filter="all">All</button>
+            <button class="case-filter-button" type="button" role="tab" aria-selected="false" data-filter="brand">Brand</button>
+            <button class="case-filter-button" type="button" role="tab" aria-selected="false" data-filter="product">Product</button>
+            <button class="case-filter-button" type="button" role="tab" aria-selected="false" data-filter="motion">Motion</button>
+        </div>
         <div class="case-study-grid">
-            <article class="case-study-card">
+            <article class="case-study-card" data-categories="brand,motion">
                 <div class="case-study-media">
                     <img src="./Assets/ASL.jpg" alt="ASL logistics rebrand" class="case-study-image">
                 </div>
@@ -333,7 +339,7 @@
                     <a class="case-study-link" href="./Assets/ASL.jpg" target="_blank" rel="noopener">View identity boards &rarr;</a>
                 </div>
             </article>
-            <article class="case-study-card">
+            <article class="case-study-card" data-categories="product,brand">
                 <div class="case-study-media">
                     <img src="./Assets/Lumisnap.jpg" alt="Lumisnap marketplace UI" class="case-study-image">
                 </div>
@@ -349,7 +355,7 @@
                     <a class="case-study-link" href="./Assets/Lumisnap.jpg" target="_blank" rel="noopener">View UI highlights &rarr;</a>
                 </div>
             </article>
-            <article class="case-study-card">
+            <article class="case-study-card" data-categories="motion,brand">
                 <div class="case-study-media">
                     <img src="./Assets/2ndoffers.jpg" alt="Laptop offers promo campaign" class="case-study-image">
                 </div>
