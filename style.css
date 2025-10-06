@@ -323,6 +323,8 @@ section {
 }
 
 .hero-focus {
+    --pointer-x: 50%;
+    --pointer-y: 50%;
     margin: 2.5rem auto 0;
     padding: 2.5rem;
     border-radius: 1.8rem;
