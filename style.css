@@ -256,6 +256,7 @@ section {
     height: auto;
     background-color: #0a0a0a;
     background-image: url('./Assets/mypic.jpg');
+    background-position: center calc(50% + var(--profile-parallax, 0px));
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
