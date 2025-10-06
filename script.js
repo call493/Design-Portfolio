@@ -1,5 +1,4 @@
 const intro = document.querySelector('.intro');
-const logo = document.querySelector('.logo-header');
 const logoSpan = document.querySelectorAll('.intro-logo');
 
 window.addEventListener('DOMContentLoaded', () => {
