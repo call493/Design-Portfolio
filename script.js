@@ -190,6 +190,9 @@ function initCaseStudyFilter() {
         });
     };
 
+    const defaultFilter = document.querySelector('.case-filter-button.is-active')?.dataset.filter || 'all';
+    applyFilter(defaultFilter);
+
     filterButtons.forEach((button) => {
         button.addEventListener('click', () => {
             applyFilter(button.dataset.filter);
