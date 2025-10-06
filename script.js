@@ -223,6 +223,9 @@ function initShowreelTimeline() {
         });
     };
 
+    const defaultSegment = document.querySelector('.showreel-timeline-dot.is-active')?.dataset.segment || timelineDots[0].dataset.segment;
+    activate(defaultSegment);
+
     timelineDots.forEach((dot) => {
         dot.addEventListener('click', () => {
             activate(dot.dataset.segment);
