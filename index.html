@@ -3,481 +3,260 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Braxton's Portfolio</title>
+    <title>Auralynx Capture Suite</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="mediaqueries.css">
 </head>
 <body>
-
-    <div class="intro">
-        <h1 class="logo-header">
-            <span class="intro-logo">B</span>
-            <span class="intro-logo">R</span>
-            <span class="intro-logo">A</span>
-            <span class="intro-logo">X</span>
-            <span class="intro-logo">T</span>
-            <span class="intro-logo">O</span>
-            <span class="intro-logo">N</span>
-        </h1>
+    <div class="page-atmosphere" aria-hidden="true">
+        <div class="atmosphere-orb atmosphere-orb--primary"></div>
+        <div class="atmosphere-orb atmosphere-orb--secondary"></div>
+        <div class="atmosphere-orb atmosphere-orb--tertiary"></div>
     </div>
 
-    <nav id="desktop-nav" class="bgcolor">
-        <div class="logo"><img src="./Assets/Braxlogo.png"
-            alt="Braxton Mandara logomark" onclick="location.href='./#profile'">
-        </div>
-        <div>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#niche-services">Services</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#showreel">Showreel</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
-                <li><a href="#contact">Contact</a></li>
+    <header class="site-header">
+        <nav class="primary-nav">
+            <a class="brand-mark" href="#overview">Auralynx</a>
+            <ul class="nav-list">
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#access">Access</a></li>
+                <li><a href="#workspace">Workspace</a></li>
+                <li><a href="#admin-tools">Admin Tools</a></li>
             </ul>
-        </div>
-    </nav>
+            <a class="nav-cta" href="#contact">Request demo</a>
+        </nav>
+    </header>
 
-    <nav id="hamburger-nav">
-        <div class="logo">Mandara</div>
-        <div class="hamburger-menu">
-            <div class="hamburger-icon" onclick="togglemenu()">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <div class="menu-links" onclick="togglemenu()">
-                <li><a href="#about" onclick="togglemenu()">About</a></li>
-                <li><a href="#niche-services" onclick="togglemenu()">Services</a></li>
-                <li><a href="#skills" onclick="togglemenu()">Skills</a></li>
-                <li><a href="#projects" onclick="togglemenu()">Projects</a></li>
-                <li><a href="#showreel" onclick="togglemenu()">Showreel</a></li>
-                <li><a href="#testimonials" onclick="togglemenu()">Testimonials</a></li>
-                <li><a href="#contact" onclick="togglemenu()">Contact</a></li>
-            </div>
-        </div>
-    </nav>
-
-    <section id="profile">
-        <div class="section__pic-container">
-            <img class="home-pic"
-            src="./Assets/me.jpg" alt="Bhavya Parmar">
-        </div>
-        <div class="section__text">
-            <p class="section__text__p1">Braxton Mandara</p>
-            <h1 class="title">Brand-Led UI/UX & Motion Designer</h1>
-            <p class="section__text__p2 hero-highlight">I craft visual identities, product interfaces, and launch-ready edits that help African startups stand out and scale.</p>
-            <p class="hero-description">From naming and design systems to Webflow builds and cinematic post-production, I partner with founders to tell a consistent story across every touchpoint.</p>
-            <div class="hero-focus" aria-labelledby="hero-focus-heading">
-                <div class="hero-focus-heading">
-                    <h2 id="hero-focus-heading">Founder-focused playbooks</h2>
-                    <p class="hero-focus-subtitle">Select a lane to see how I help teams launch with confidence.</p>
+    <main>
+        <section id="overview" class="hero-section">
+            <div class="hero-content glass-panel">
+                <h1 class="hero-title">Field-ready audio capture with progress continuity</h1>
+                <p class="hero-lead">Auralynx keeps interview teams focused on conversations. Capture multi-part voice responses, save drafts as you go, and sync finalized recordings to Google Drive without duplicating work.</p>
+                <div class="hero-actions">
+                    <a class="action-button action-button--filled" href="#access">Explore access</a>
+                    <a class="action-button" href="#workspace">Preview workspace</a>
                 </div>
-                <div class="hero-focus-controls" role="tablist" aria-label="Focus areas">
-                    <button class="hero-focus-control" type="button" role="tab" aria-selected="true" data-focus="brand" id="focus-brand">Brand Launch</button>
-                    <button class="hero-focus-control" type="button" role="tab" aria-selected="false" data-focus="product" id="focus-product">Product UI</button>
-                    <button class="hero-focus-control" type="button" role="tab" aria-selected="false" data-focus="motion" id="focus-motion">Motion Campaign</button>
-                </div>
-                <div class="hero-focus-panels">
-                    <article class="hero-focus-panel is-active" role="tabpanel" aria-labelledby="focus-brand" data-focus-panel="brand">
-                        <h3>Brand Launch Blueprint</h3>
-                        <p>Align naming, storytelling, and visual identity into a kit your team can deploy across socials, investor decks, and partnerships.</p>
-                        <ul>
-                            <li>Brand narrative workshop and positioning map</li>
-                            <li>Identity suite with usage rules and motion-ready marks</li>
-                            <li>Activation dashboard for launch channels</li>
-                        </ul>
-                    </article>
-                    <article class="hero-focus-panel" role="tabpanel" aria-labelledby="focus-product" data-focus-panel="product" hidden>
-                        <h3>Product UI Accelerator</h3>
-                        <p>Audit flows, create design systems, and hand off production-ready components that shorten design-to-dev cycles.</p>
-                        <ul>
-                            <li>UX teardown and priority roadmap</li>
-                            <li>Component-driven design system in Figma & Webflow</li>
-                            <li>Annotated prototypes and Loom walkthroughs</li>
-                        </ul>
-                    </article>
-                    <article class="hero-focus-panel" role="tabpanel" aria-labelledby="focus-motion" data-focus-panel="motion" hidden>
-                        <h3>Motion Campaign Lab</h3>
-                        <p>Translate strategy into cinematic edits, from storyboarding to color and sound finishing for launch day impact.</p>
-                        <ul>
-                            <li>Concept boards and scripting support</li>
-                            <li>Animation, typography, and visual effects passes</li>
-                            <li>Delivery package tuned for reels, ads, and keynotes</li>
-                        </ul>
-                    </article>
-                </div>
-            </div>
-            <div class="btn-container">
-                <button class="btn btn-color-1"
-                onclick="location.href='mailto:braxtonmandara254@gmail.com?subject=Discovery%20Call%20Request&body=Hi%20Braxton%2C%20let%E2%80%99s%20plan%20a%20brand%2C%20product%2C%20or%20motion%20project.'">
-                Book discovery call
-                </button>
-                <button class="btn btn-color-2"
-                onclick="window.open('https://www.instagram.com/brax.media/', '_blank')"
-                >
-                Watch showreel
-                </button>
-            </div>
-            <!-- <div id="socials-container">
-                <img src='./Assets/linkedin.png' alt="My LinkedIn Profile"
-                class="icon" onclick="location.href='https://www.linkedin.com/braxton-m'">
-                <img src='./Assets/insta.png' alt="My Instagram Handle"
-                class="icon" onclick="location.href='https://www.instagram.com/brax.media/'">
-                </div> -->
-        </div>
-    </section>
-
-    <section id="niche-services">
-        <p class="section__text">Signature Services</p>
-        <h2 class="title">End-to-end brand, product, and motion support</h2>
-        <div class="services-grid" role="list">
-            <article class="service-card" data-service="brand" role="listitem">
-                <header class="service-card-header">
-                    <h3 class="service-title">Identity Systems & Brand Kits</h3>
-                    <button class="service-toggle" type="button" aria-expanded="true" aria-controls="service-panel-brand">View process</button>
-                </header>
-                <p class="service-summary">Naming, messaging, and visual language for founders launching or refreshing their presence.</p>
-                <div class="service-body" id="service-panel-brand">
-                    <ul class="service-list">
-                        <li>Logo suites, type pairings, and color governance</li>
-                        <li>Messaging pillars and voice guidelines</li>
-                        <li>Launch assets for socials and investor decks</li>
-                    </ul>
-                    <div class="service-metrics">
-                        <p><span>Launch timeline:</span> 3–5 weeks</p>
-                        <p><span>Ideal for:</span> Seed to Series A startups refreshing brand presence</p>
+                <dl class="hero-stats">
+                    <div class="hero-stat">
+                        <dt>Average session length</dt>
+                        <dd>18 min</dd>
                     </div>
-                </div>
-            </article>
-            <article class="service-card" data-service="product" role="listitem">
-                <header class="service-card-header">
-                    <h3 class="service-title">Product UI/UX & Webflow Builds</h3>
-                    <button class="service-toggle" type="button" aria-expanded="false" aria-controls="service-panel-product">View process</button>
-                </header>
-                <p class="service-summary">Design mobile-first product flows and marketing sites that express the brand story with clarity.</p>
-                <div class="service-body" id="service-panel-product" hidden>
-                    <ul class="service-list">
-                        <li>Heuristic audits, journey maps, and wireframes</li>
-                        <li>High-fidelity design systems in Figma</li>
-                        <li>Webflow implementation with responsive QA</li>
-                    </ul>
-                    <div class="service-metrics">
-                        <p><span>Launch timeline:</span> 4–6 weeks</p>
-                        <p><span>Ideal for:</span> SaaS or community platforms prepping for public launch</p>
+                    <div class="hero-stat">
+                        <dt>Offline-first checkpoints</dt>
+                        <dd>Auto every 90 sec</dd>
                     </div>
-                </div>
-            </article>
-            <article class="service-card" data-service="motion" role="listitem">
-                <header class="service-card-header">
-                    <h3 class="service-title">Motion & Video Campaigns</h3>
-                    <button class="service-toggle" type="button" aria-expanded="false" aria-controls="service-panel-motion">View process</button>
-                </header>
-                <p class="service-summary">Script-to-screen editing that translates strategy into energetic launch content.</p>
-                <div class="service-body" id="service-panel-motion" hidden>
-                    <ul class="service-list">
-                        <li>Storyboarding and asset prep for edit sessions</li>
-                        <li>Color, sound, and motion graphics polish</li>
-                        <li>Deliverables for organic, paid, and event screens</li>
-                    </ul>
-                    <div class="service-metrics">
-                        <p><span>Launch timeline:</span> 2–4 weeks</p>
-                        <p><span>Ideal for:</span> Product drops, conference recaps, and fundraising campaigns</p>
+                    <div class="hero-stat">
+                        <dt>Drive export formats</dt>
+                        <dd>WAV · MP3 · JSON notes</dd>
                     </div>
-                </div>
-            </article>
-        </div>
-    </section>
+                </dl>
+            </div>
+            <aside class="hero-aside glass-panel">
+                <h2 class="aside-title">Session timeline preview</h2>
+                <ol class="timeline-list">
+                    <li>
+                        <span class="timeline-step">01</span>
+                        <div>
+                            <p class="timeline-label">Warm-up identity check</p>
+                            <p class="timeline-note">Auto tags respondent ID and local site.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="timeline-step">02</span>
+                        <div>
+                            <p class="timeline-label">Core questionnaire</p>
+                            <p class="timeline-note">Bookmark answers, save mid-session, and resume on any device.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="timeline-step">03</span>
+                        <div>
+                            <p class="timeline-label">Drive sync queue</p>
+                            <p class="timeline-note">Verify quality, encrypt, and push via Google Drive API.</p>
+                        </div>
+                    </li>
+                </ol>
+            </aside>
+        </section>
 
-    <section id="showreel">
-        <p class="section__text">Motion & Video</p>
-        <h2 class="title">Showreel anchored in storytelling</h2>
-        <div class="showreel-grid">
-            <figure class="showreel-media">
-                <img src="./Assets/Media-training.jpg" alt="Media training promo still" class="showreel-cover">
-                <figcaption class="showreel-caption">
-                    <span class="showreel-tag">Video Editing</span>
-                    <span class="showreel-tag">Motion Design</span>
-                    <span class="showreel-tag">Sound Design</span>
-                </figcaption>
-                <button class="btn btn-color-2 showreel-button" onclick="window.open('https://www.instagram.com/brax.media/', '_blank')">Watch full showreel</button>
-            </figure>
-            <div class="showreel-details">
-                <h3 class="showreel-title">Launch-ready edits for product demos, events, and social drops.</h3>
-                <p class="showreel-description">I merge cinematic pacing with product storytelling—cutting footage, motion graphics, and voiceover into narratives that convert attention into action.</p>
-                <div class="showreel-timeline" role="tablist" aria-label="Showreel segments">
-                    <button class="showreel-timeline-dot is-active" type="button" role="tab" aria-selected="true" data-segment="arc">Brand arc</button>
-                    <button class="showreel-timeline-dot" type="button" role="tab" aria-selected="false" data-segment="product">Product demo</button>
-                    <button class="showreel-timeline-dot" type="button" role="tab" aria-selected="false" data-segment="event">Event recap</button>
-                </div>
-                <div class="showreel-panels">
-                    <article class="showreel-panel is-active" role="tabpanel" data-segment-panel="arc">
-                        <ul class="showreel-highlights">
-                            <li><strong>Recent wins:</strong> DSAIL Research Day recap grew RSVPs by 42%.</li>
-                            <li><strong>Toolchain:</strong> Premiere Pro, After Effects, Audition, DaVinci Resolve.</li>
-                            <li><strong>Formats:</strong> 16:9 keynote loops, 9:16 reels, 1:1 paid ads, full-length explainers.</li>
+        <section id="access" class="access-section">
+            <div class="section-intro">
+                <h2>Role-based access with defaults</h2>
+                <p>Use the sample credentials below for design review. Authentication state is mocked in this UI study.</p>
+            </div>
+            <div class="access-grid">
+                <article class="auth-card glass-panel user-auth">
+                    <header class="auth-card-header">
+                        <h3>Field collector login</h3>
+                        <p class="auth-tag">Live interviews</p>
+                    </header>
+                    <ul class="credential-list">
+                        <li><span>Email</span><span>collector@auralynx.app</span></li>
+                        <li><span>Password</span><span>VoiceTrack#27</span></li>
+                    </ul>
+                    <form class="auth-form" aria-label="Field collector login form">
+                        <label for="user-email">Email</label>
+                        <input id="user-email" type="email" name="user-email" autocomplete="username">
+                        <label for="user-password">Password</label>
+                        <input id="user-password" type="password" name="user-password" autocomplete="current-password">
+                        <button type="button" class="auth-submit">Sign in</button>
+                    </form>
+                    <div class="auth-footnote">Access grants current question pack, resume tokens, and microphone diagnostics.</div>
+                </article>
+                <article class="auth-card glass-panel admin-auth">
+                    <header class="auth-card-header">
+                        <h3>Admin console login</h3>
+                        <p class="auth-tag">Question curation</p>
+                    </header>
+                    <ul class="credential-list">
+                        <li><span>Email</span><span>admin@auralynx.app</span></li>
+                        <li><span>Password</span><span>AdminWave!92</span></li>
+                    </ul>
+                    <form class="auth-form" aria-label="Administrator login form">
+                        <label for="admin-email">Email</label>
+                        <input id="admin-email" type="email" name="admin-email" autocomplete="username">
+                        <label for="admin-password">Password</label>
+                        <input id="admin-password" type="password" name="admin-password" autocomplete="current-password">
+                        <button type="button" class="auth-submit">Enter console</button>
+                    </form>
+                    <div class="auth-footnote">Admins manage question packs, review submissions, and approve Drive exports.</div>
+                </article>
+            </div>
+        </section>
+
+        <section id="workspace" class="workspace-section">
+            <div class="section-intro">
+                <h2>Capture workspace</h2>
+                <p>Field teams record responses, attach context notes, and save drafts without re-recording.</p>
+            </div>
+            <div class="workspace-grid">
+                <article class="question-flow-card glass-panel">
+                    <header class="question-flow-header">
+                        <div>
+                            <p class="question-badge">Question <span id="questionPosition">1</span> of <span id="questionTotal">3</span></p>
+                            <h3 id="questionTitle">State your full name and organizational unit.</h3>
+                        </div>
+                        <progress id="questionProgress" value="0" max="100">0%</progress>
+                    </header>
+                    <p id="questionHint" class="question-hint">Spell names clearly and reference the regional office responsible for this interview.</p>
+                    <div class="response-field">
+                        <label for="responseText">Response notes</label>
+                        <textarea id="responseText" rows="6" aria-describedby="questionHint"></textarea>
+                    </div>
+                    <div class="question-controls">
+                        <button type="button" class="control-button" id="prevQuestion">Previous</button>
+                        <button type="button" class="control-button control-button--highlight" id="saveProgress">Save response</button>
+                        <button type="button" class="control-button" id="nextQuestion">Next</button>
+                    </div>
+                    <div class="session-actions">
+                        <button type="button" class="secondary-button" id="markRecorded">Mark recording complete</button>
+                        <button type="button" class="secondary-button" id="resetSession">Reset session</button>
+                    </div>
+                    <div class="saved-state" id="savedState"></div>
+                </article>
+
+                <article class="audio-capture-card glass-panel">
+                    <header class="audio-header">
+                        <h3>Recorder</h3>
+                        <p>Start capture when the participant is ready. Clips queue for quality check before Drive upload.</p>
+                    </header>
+                    <div class="record-controls">
+                        <button type="button" class="record-button" id="recordToggle">Start recording</button>
+                        <span class="record-indicator" id="recordIndicator">Idle</span>
+                        <span class="record-timer" id="recordTimer">00:00</span>
+                    </div>
+                    <div class="audio-log" id="audioLog" aria-live="polite"></div>
+                    <div class="upload-queue">
+                        <h4>Pending Drive uploads</h4>
+                        <ul id="uploadQueue">
+                            <li><span class="upload-item-name">Baseline narrative</span><span class="upload-status">Queued</span></li>
+                            <li><span class="upload-item-name">Household context</span><span class="upload-status">Uploaded</span></li>
                         </ul>
-                    </article>
-                    <article class="showreel-panel" role="tabpanel" data-segment-panel="product" hidden>
-                        <ul class="showreel-highlights">
-                            <li><strong>Focus:</strong> UI overlays highlighting key features and UX copy.</li>
-                            <li><strong>Deliverables:</strong> SaaS launch clips, step-by-step walkthroughs, demo booth loops.</li>
-                            <li><strong>Impact:</strong> Helped Lumisnap secure 5,000+ creator waitlist signups.</li>
-                        </ul>
-                    </article>
-                    <article class="showreel-panel" role="tabpanel" data-segment-panel="event" hidden>
-                        <ul class="showreel-highlights">
-                            <li><strong>Focus:</strong> High-energy cuts that translate event energy to on-demand viewing.</li>
-                            <li><strong>Deliverables:</strong> Opening titles, speaker bumpers, same-day recap edits.</li>
-                            <li><strong>Impact:</strong> Boosted DSAIL showcase attendance by 42% year-over-year.</li>
-                        </ul>
-                    </article>
-                </div>
-                <a class="showreel-contact" href="mailto:braxtonmandara254@gmail.com?subject=Motion%20Project%20Inquiry&body=Hi%20Braxton%2C%20I%E2%80%99d%20love%20to%20collaborate%20on%20a%20motion%20project." >Share a brief &rarr;</a>
-            </div>
-        </div>
-    </section>
-
-    <section id="about">
-        <p class="section__text">Get To Know</p>
-        <h1 class="title2">About Me</h1>
-        <div class="section-container">
-            <div class="section__pic-container">
-                <img src="./Assets/Braxton.jpg"
-                alt="Profile Picture"
-                class="about-pic">
-            </div>
-            <div class="about-details-container">
-                <div class="about-containers">
-                    <div class="details-container">
-                        <img src="./Assets/experience.png"
-                        alt="experience icon" class="icon">
-                        <h3 class="about-headings">Experience</h3>
-                        <p><b>3+ years</b><br>Graphic Designing<br>Video Editing<br>UI/UX Designing<br>Web development</p>
+                        <button type="button" class="secondary-button">Open Drive connector</button>
                     </div>
-                    <div class="details-container">
-                        <img src="./Assets/graduation.png"
-                        alt="education icon" class="icon">
-                        <h3 class="about-headings">Education</h3>
-                        <p><b>Dedan Kimathi University of Technology, Nyeri</b>
-                        <br>B.Sc. - Computer Science<br>
-                        2024</p>
-                    </div>
-                </div>
-                <div class="text-container">
-                    <p>
-                        I'm a graduate of Dedan Kimathi University of Technology, a Principal Partner at Avalanche Revamp, and Web Experience Designer and Developer at DSAIL. I lead branding, UI/UX, and motion initiatives that help founders translate complex ideas into clear, actionable stories across every screen.
-                    </p>
-                </div>
+                </article>
+
+                <article class="session-log-card glass-panel">
+                    <header>
+                        <h3>Autosave milestones</h3>
+                        <p>Every draft save records timestamps for continuity.</p>
+                    </header>
+                    <ul class="session-log" id="sessionLog"></ul>
+                </article>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="skills">
-        <p class="section__text">Have a look at my</p>
-        <h1 class="title">Skills</h1>
-        <div class="skills-details-container">
-                <div class="sk-details-container">
-                    <h2 class="skills-subtitle">Brand & UI Systems</h2>
-                    <div class="article-container">
-                        <article>
-                            <img src="./Assets/checkmark.png" alt="Checkmark icon"
-                            class="icon">
-                            <div>
-                                <h3>Design systems (Figma)</h3>
-                                <p>Advanced</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./Assets/checkmark.png" alt="Checkmark icon"
-                            class="icon">
-                            <div>
-                                <h3>Webflow development</h3>
-                                <p>Experienced</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./Assets/checkmark.png" alt="Checkmark icon"
-                            class="icon">
-                            <div>
-                                <h3>DesignOps & handoff</h3>
-                                <p>Experienced</p>
-                            </div>
-                        </article>
-                    </div>
-                    <h2 class="skills-subtitle">Motion & Post-Production</h2>
-                    <div class="article-container">
-                        <article>
-                            <img src="./Assets/checkmark.png" alt="Checkmark icon"
-                            class="icon">
-                            <div>
-                                <h3>Adobe Premiere Pro</h3>
-                                <p>Advanced</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./Assets/checkmark.png" alt="Checkmark icon"
-                            class="icon">
-                            <div>
-                                <h3>Adobe After Effects</h3>
-                                <p>Advanced</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./Assets/checkmark.png" alt="Checkmark icon"
-                            class="icon">
-                            <div>
-                                <h3>Color & sound finishing</h3>
-                                <p>Experienced</p>
-                            </div>
-                        </article>
-                    </div>           
-                </div>
-        </div>
-    </section>
-
-    <section id="projects">
-        <p class="section__text">Selected Case Studies</p>
-        <h1 class="title">Recent collaborations</h1>
-        <div class="case-filter" role="tablist" aria-label="Filter case studies">
-            <button class="case-filter-button is-active" type="button" role="tab" aria-selected="true" data-filter="all">All</button>
-            <button class="case-filter-button" type="button" role="tab" aria-selected="false" data-filter="brand">Brand</button>
-            <button class="case-filter-button" type="button" role="tab" aria-selected="false" data-filter="product">Product</button>
-            <button class="case-filter-button" type="button" role="tab" aria-selected="false" data-filter="motion">Motion</button>
-        </div>
-        <div class="case-study-grid">
-            <article class="case-study-card" data-categories="brand,motion">
-                <div class="case-study-media">
-                    <img src="./Assets/ASL.jpg" alt="ASL logistics rebrand" class="case-study-image">
-                </div>
-                <div class="case-study-content">
-                    <p class="case-study-tag">Brand Identity · Motion Toolkit</p>
-                    <h3 class="case-study-title">ASL Logistics</h3>
-                    <p class="case-study-summary">Delivered a refreshed identity and launch kit with motion-ready assets for a national logistics provider expanding into e-commerce fulfillment.</p>
-                    <ul class="case-study-list">
-                        <li><strong>Role:</strong> Brand designer & motion lead</li>
-                        <li><strong>Deliverables:</strong> Logo suite, typography system, animated stingers</li>
-                        <li><strong>Result:</strong> Unified brand visuals across 12+ partner touchpoints</li>
+        <section id="admin-tools" class="admin-section">
+            <div class="section-intro">
+                <h2>Admin controls</h2>
+                <p>Curate question packs, enforce consent scripts, and monitor upload completion.</p>
+            </div>
+            <div class="admin-grid">
+                <article class="question-upload-card glass-panel">
+                    <h3>Upload question set</h3>
+                    <form id="questionUploadForm" class="upload-form">
+                        <label for="packName">Pack title</label>
+                        <input id="packName" type="text" name="packName" value="Rural health outreach - Q2" />
+                        <label for="packVersion">Version tag</label>
+                        <input id="packVersion" type="text" name="packVersion" value="2.3" />
+                        <label for="packFile">CSV or JSON format</label>
+                        <input id="packFile" type="file" name="packFile" accept=".csv,.json">
+                        <button type="button" class="auth-submit">Stage upload</button>
+                    </form>
+                    <ul class="upload-guidelines">
+                        <li>Ensure each question includes an ID, prompt, and guidance field.</li>
+                        <li>Mark compulsory sections with <code>required=true</code>.</li>
+                        <li>Use ISO strings for availability windows.</li>
                     </ul>
-                    <a class="case-study-link" href="./Assets/ASL.jpg" target="_blank" rel="noopener">View identity boards &rarr;</a>
-                </div>
-            </article>
-            <article class="case-study-card" data-categories="product,brand">
-                <div class="case-study-media">
-                    <img src="./Assets/Lumisnap.jpg" alt="Lumisnap marketplace UI" class="case-study-image">
-                </div>
-                <div class="case-study-content">
-                    <p class="case-study-tag">Product UI/UX · Webflow</p>
-                    <h3 class="case-study-title">Lumisnap Creator Platform</h3>
-                    <p class="case-study-summary">Built a modular design system and Webflow marketing site to help photographers sell presets and live workshops under a cohesive brand story.</p>
-                    <ul class="case-study-list">
-                        <li><strong>Role:</strong> Lead product designer & Webflow developer</li>
-                        <li><strong>Deliverables:</strong> Dashboard flows, conversion-optimized landing page, component library</li>
-                        <li><strong>Result:</strong> Increased sign-up rate by 27% post-launch</li>
+                </article>
+                <article class="question-library-card glass-panel">
+                    <header class="library-header">
+                        <h3>Current library</h3>
+                        <button type="button" class="secondary-button">Export audit log</button>
+                    </header>
+                    <ul class="library-list">
+                        <li>
+                            <div>
+                                <p class="library-pack-name">Urban livelihoods baseline</p>
+                                <p class="library-pack-meta">Version 4.1 · 24 questions · Last updated 3 days ago</p>
+                            </div>
+                            <span class="library-status library-status--active">Active</span>
+                        </li>
+                        <li>
+                            <div>
+                                <p class="library-pack-name">Adolescent mentorship check-ins</p>
+                                <p class="library-pack-meta">Version 1.6 · 18 questions · Last updated 6 days ago</p>
+                            </div>
+                            <span class="library-status library-status--draft">Draft</span>
+                        </li>
+                        <li>
+                            <div>
+                                <p class="library-pack-name">Water access rapid survey</p>
+                                <p class="library-pack-meta">Version 3.0 · 12 questions · Last updated 2 weeks ago</p>
+                            </div>
+                            <span class="library-status library-status--archived">Archived</span>
+                        </li>
                     </ul>
-                    <a class="case-study-link" href="./Assets/Lumisnap.jpg" target="_blank" rel="noopener">View UI highlights &rarr;</a>
-                </div>
-            </article>
-            <article class="case-study-card" data-categories="motion,brand">
-                <div class="case-study-media">
-                    <img src="./Assets/2ndoffers.jpg" alt="Laptop offers promo campaign" class="case-study-image">
-                </div>
-                <div class="case-study-content">
-                    <p class="case-study-tag">Campaign Creative · Motion Edit</p>
-                    <h3 class="case-study-title">Second Offer Launch</h3>
-                    <p class="case-study-summary">Produced a fast-paced promo campaign blending 3D renders, typography, and scripted voiceover to debut a new electronics subscription service.</p>
-                    <ul class="case-study-list">
-                        <li><strong>Role:</strong> Creative director, editor, and compositor</li>
-                        <li><strong>Deliverables:</strong> Paid social ads, in-store motion loops, pitch deck visuals</li>
-                        <li><strong>Result:</strong> Helped the team close three enterprise pilots in the first month</li>
-                    </ul>
-                    <a class="case-study-link" href="./Assets/2ndoffers.jpg" target="_blank" rel="noopener">View campaign frames &rarr;</a>
-                </div>
-            </article>
-        </div>
-        <div class="case-study-cta">
-            <a class="btn btn-color-2" href="projects.html">Browse the full archive</a>
-        </div>
-    </section>
-
-    <section id="testimonials">
-        <p class="section__text">Client Feedback</p>
-        <h1 class="title">Trusted by product and community teams</h1>
-        <div class="testimonial-grid">
-            <figure class="testimonial-card">
-                <blockquote>“Braxton translated our technical jargon into a brand system investors actually understood. The motion reel he produced for demo day still gets referenced in every pitch.”</blockquote>
-                <figcaption>
-                    <span class="testimonial-name">Ann Wanjiku</span>
-                    <span class="testimonial-role">Managing Partner · Avalanche Revamp</span>
-                </figcaption>
-            </figure>
-            <figure class="testimonial-card">
-                <blockquote>“He mapped complex onboarding flows into a clear UI kit and Webflow site in a fraction of the time. The rollout pushed our waitlist past 5,000 creatives.”</blockquote>
-                <figcaption>
-                    <span class="testimonial-name">Dennis Lumumba</span>
-                    <span class="testimonial-role">Founder · Lumisnap</span>
-                </figcaption>
-            </figure>
-            <figure class="testimonial-card">
-                <blockquote>“From storytelling to sound design, Braxton’s edits make our research feel alive. Attendance for our last showcase jumped thanks to the video assets.”</blockquote>
-                <figcaption>
-                    <span class="testimonial-name">Dr. Susan Oduor</span>
-                    <span class="testimonial-role">Director · DSAIL</span>
-                </figcaption>
-            </figure>
-        </div>
-    </section>
-
-    <section id="contact">
-        <p class="section__text contact-intro-label">Get In Touch</p>
-        <h1 class="title contact-title-emphasis">Contact Me</h1>
-        <p class="contact-lead">Share a brief, request the rate card, or book a discovery chat—I'll reply within two business days.</p>
-        <div class="contact-info-upper-container">
-            <div class="contact-info-container">
-                <a href="mailto:braxtonmandara254@gmail.com">
-                    <img src="./Assets/email.png" alt="Email icon"
-                    class="icon contact-icon">
-                    <p>braxtonmandara254@gmail.com</p>
-                </a>
-                <button class="contact-copy" type="button" data-copy-target="braxtonmandara254@gmail.com">Copy email</button>
+                </article>
             </div>
-            <!-- <div class="contact-info-container">
-            <a href="https://www.linkedin.com/in/braxton-m/">
-                <img src="./Assets/linkedin.png" alt="LinkedIn" 
-                class="icon contact-icon">
-                <p>Connect with me on LinkedIn</p>
-            </a>
-            </div> -->
-            <div class="contact-info-container">
-            <a href="https://www.instagram.com/brax.media/">
-                <img src='./Assets/insta.png' alt="My Instagram Handle" 
-                class="icon contact-icon">
-                <p>DM me on Instagram</p>
-            </a>
-            </div>
-        </div>
-        <div class="logo"><img src="./Assets/Braxlogo.png"
-            alt="Braxton Mandara logomark" onclick="location.href='./#profile'">
-        </div> 
-    </section>
+        </section>
 
-    <footer>
-        <nav>
-            <div class="nav-links-container2">
-                <ul class="nav-links">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#niche-services">Services</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#showreel">Showreel</a></li>
-                    <li><a href="#testimonials">Testimonials</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
+        <section id="contact" class="cta-section glass-panel">
+            <div class="cta-content">
+                <h2>Roll out in under a week</h2>
+                <p>We provide deployment playbooks, consent scripts, and Drive automation templates so your team can begin collecting evidence fast.</p>
+                <div class="cta-actions">
+                    <a class="action-button action-button--filled" href="mailto:hello@auralynx.app">Email our team</a>
+                    <a class="action-button" href="#overview">Review overview</a>
+                </div>
             </div>
-        </nav><br>
-        <p>Copyright &#169; 2025 Braxton Mandara</p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2025 Auralynx Capture Suite. Field data collection designed for voice-first research.</p>
     </footer>
 
-   <script type="module" src="./script.js"></script>
+    <script type="module" src="./script.js"></script>
 </body>
 </html>
