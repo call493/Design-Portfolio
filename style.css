@@ -613,6 +613,10 @@ main {
     color: rgba(255, 116, 102, 0.78);
 }
 
+.record-indicator--active {
+    color: #ff7f6e;
+}
+
 .record-timer {
     margin-left: auto;
     font-variant-numeric: tabular-nums;
@@ -623,6 +627,10 @@ main {
 .audio-log {
     display: grid;
     gap: 0.8rem;
+}
+
+.audio-log audio {
+    width: 100%;
 }
 
 .audio-log .clip-entry {
