@@ -562,6 +562,15 @@ main {
     background: rgba(90, 200, 250, 0.18);
 }
 
+.control-button:disabled,
+.secondary-button:disabled,
+.auth-submit:disabled,
+.record-button:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
 .saved-state {
     border-radius: var(--radius-small);
     border: 1px dashed rgba(90, 200, 250, 0.28);
