@@ -210,6 +210,7 @@ let mediaRecorder;
 let mediaStream;
 let recordingTimer;
 let recordingSeconds = 0;
+let lastRecordingDuration = 0;
 
 function updateTimerDisplay() {
     const minutes = String(Math.floor(recordingSeconds / 60)).padStart(2, "0");
@@ -251,7 +252,7 @@ async function beginRecording() {
         mediaRecorder.addEventListener("stop", () => {
             const blob = new Blob(chunks, { type: "audio/webm" });
             const clipURL = URL.createObjectURL(blob);
-            renderClipEntry(blob, clipURL);
+            renderClipEntry(blob, clipURL, lastRecordingDuration);
 
             if (mediaStream) {
                 mediaStream.getTracks().forEach((track) => track.stop());
@@ -271,6 +272,7 @@ async function beginRecording() {
 
 function stopRecording() {
     if (mediaRecorder && mediaRecorder.state !== "inactive") {
+        lastRecordingDuration = recordingSeconds;
         mediaRecorder.stop();
     }
     stopTimer();
@@ -281,7 +283,7 @@ function stopRecording() {
     updateTimerDisplay();
 }
 
-function renderClipEntry(blob, clipURL) {
+function renderClipEntry(blob, clipURL, durationSeconds) {
     const clipWrapper = document.createElement("div");
     clipWrapper.className = "clip-entry";
 
@@ -292,7 +294,8 @@ function renderClipEntry(blob, clipURL) {
     timestamp.textContent = formatTime(new Date().toISOString());
 
     const duration = document.createElement("span");
-    duration.textContent = `${Math.max(recordingSeconds, 1)} sec`;
+    const displaySeconds = Math.max(Math.round(durationSeconds), 1);
+    duration.textContent = `${displaySeconds} sec`;
 
     header.append(timestamp, duration);
 
