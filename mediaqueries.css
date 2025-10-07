@@ -1,230 +1,142 @@
-@media screen and (max-width: 1244px){
-    #about{
-        height: fit-content;
-        padding-bottom: 4rem;
-    }
-    #about .section__pic-container{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .about-pic {
-        width: 300px;
-        height: 300px;
-        margin: auto;
-        margin-top: 2rem;
-        margin-left: 2rem;
-    }
-    .about-containers {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        flex: 1;
-        justify-content: center;
-        align-items: center;
-        margin-top: 2rem;
-        padding: 0 2rem;
-        gap: 2rem;
-    }
-    .about-containers .details-container {
-        padding-left: 2rem;
-        padding-right: 2rem;
-        min-width: 16rem;
-    }
-    #about .text-container {
-        padding: 0 2rem;
+@media screen and (max-width: 1200px) {
+    main {
+        padding-inline: 5%;
     }
 
-}
-@media screen and (max-width: 1140px){
-    
-    #desktop-nav .nav-links {
-        display: none;
-    }
-    #desktop-nav{
-        margin: 0;
-        left: 0;
-    }
-    #hamburger-nav{
-        display: flex;
-        right: 0;
-        padding-right: 5%;
-    }
-    #skills, .skills-details-container {
-        padding-bottom: 3rem;
-    }
-    #profile{
-        height: auto;
-        padding: 7rem 5% 4rem;
-    }
-    #profile, .section-container {
-        display: block;
+    .primary-nav {
+        padding-inline: 1.6rem;
     }
 
-    section, .section-container {
-        height: fit-content;
-        justify-content: center;
-    }
-    section {
-        padding: 4rem 5%;
-    }
-    .home-pic {
-        width: 275px;
-        height: 275px;
-        margin: auto;
-    }
-    .about-pic {
-        width: 300px;
-        height: 300px;
-        margin: auto;
-        margin-top: 2rem;
-
-    }
-    .intro{
-        width:100%;
-    }
-    .hamburger-nav{
-        right: 0;
-    }
-
-
-    #skills{
-        height: fit-content;
-    }
-
-    .skills-details-container{
-        padding: 0 8%;
-    }
-
-    .sk-details-container{
-        margin: 0;
-    }
-    #contact {
-        height: fit-content;
-    }
-    #contact .title{
-        margin-bottom: 2rem;
-    }
-    .contact-info-upper-container{
-        width: fit-content;
-        display: flex;
-        flex-direction: column;
-        border-radius: 2rem;
-        margin: 0;
-        margin-bottom: 1rem;
-        padding: 0;
-        padding-bottom: 0.2rem;
-    }
-    footer{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    footer .nav-links-container, .nav-links {
-        padding: 0;
-        margin: auto;
-    }
-    footer nav{
-        padding: 0;
-    }
-
-    #all-projects{
-        width: 100%;
-        margin: 0;
-    }
-    .work-list{
-        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-        padding: 0 5%;
-    }
-    .hero-focus {
-        padding: 2rem;
-    }
-    .hero-focus-controls {
-        grid-template-columns: 1fr 1fr;
-    }
-    .hero-focus-panels {
-        grid-template-columns: 1fr 1fr;
-    }
-    .services-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-    .showreel-grid {
+    .hero-section {
         grid-template-columns: 1fr;
-        gap: 2.2rem;
     }
-    .showreel-media {
-        max-width: 520px;
-        margin: 0 auto;
+
+    .hero-aside {
+        order: -1;
     }
-    .case-filter {
-        justify-content: center;
+
+    .workspace-grid {
+        grid-template-columns: 1fr;
     }
-    .showreel-button {
+
+    .admin-grid,
+    .access-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .primary-nav {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .nav-list {
+        order: 3;
         width: 100%;
-        margin: 0 0 1.8rem;
-    }
-    .case-study-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-    .case-study-image {
-        height: 260px;
-    }
-    .testimonial-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        justify-content: center;
+        flex-wrap: wrap;
     }
 
+    .nav-cta {
+        order: 2;
+    }
+
+    main {
+        gap: 4rem;
+    }
+
+    .glass-panel {
+        padding: 2.2rem;
+    }
+
+    .hero-stats {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    }
 }
 
-@media screen and (max-width: 500px){
-    .about-containers .details-container {
-        padding-left: 2rem;
-        padding-right: 2rem;
-        max-width: 15rem;
+@media screen and (max-width: 720px) {
+    main {
+        padding-inline: 1.8rem;
+        padding-top: 6.4rem;
+    }
+
+    .primary-nav {
+        padding-inline: 1rem;
+    }
+
+    .nav-list {
+        gap: 1.1rem;
+        font-size: 0.9rem;
+    }
+
+    .hero-actions,
+    .cta-actions,
+    .question-controls,
+    .session-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .control-button,
+    .secondary-button,
+    .action-button {
+        width: 100%;
+    }
+
+    .glass-panel {
+        border-radius: 22px;
+    }
+
+    .record-controls {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .record-timer {
+        margin-left: 0;
+    }
+
+    .timeline-list li {
+        grid-template-columns: 36px 1fr;
+        gap: 0.8rem;
     }
 }
 
-@media screen and (max-width: 500px){
-    .work-list{
-        margin: 0;
-        grid-template-columns: auto;
+@media screen and (max-width: 520px) {
+    body {
+        font-size: 0.96rem;
     }
-    .hero-focus {
+
+    main {
+        padding-inline: 1.2rem;
+        gap: 3.4rem;
+    }
+
+    .glass-panel {
         padding: 1.8rem;
     }
-    .hero-focus-controls {
-        grid-template-columns: 1fr;
-    }
-    .hero-focus-panels {
-        grid-template-columns: 1fr;
-    }
-    .services-grid,
-    .case-study-grid,
-    .testimonial-grid {
-        grid-template-columns: 1fr;
-    }
-    .showreel-timeline {
-        width: 100%;
-        justify-content: center;
-        text-align: center;
-    }
-    section{
-        width: auto;
-        margin-left: 0;
-        margin-right: 0;
-        padding: 3rem 1.5rem;
-    }
-    #profile {
-        padding: 6rem 1.5rem 3rem;
-    }
-    #contact{
-        margin-top: 1rem;
-    }
-}
 
-@media(prefers-reduced-motion) {
-    .section__text{
-        transition: none;
+    .credential-list li {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.25rem;
+    }
+
+    .record-controls,
+    .upload-queue,
+    .session-log li {
+        padding: 0.9rem 1rem;
+    }
+
+    .library-list li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .timeline-step {
+        width: 36px;
+        height: 36px;
+        font-size: 0.85rem;
     }
 }
