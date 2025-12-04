@@ -160,10 +160,20 @@ body.theme-light {
 
 body {
     font-family: var(--font-body);
-    background-color: var(--color-bg-primary);
+    background-color: transparent;
     color: var(--color-text-secondary);
     transition: background-color var(--transition-base), color var(--transition-base);
     overflow-x: hidden;
+}
+
+#canvas1 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: radial-gradient(#1a1a1a, #000000);
 }
 
 body::-webkit-scrollbar {
@@ -468,14 +478,16 @@ section {
     justify-content: center;
     gap: 10rem;
     height: 100vh;
-    background-color: #0a0a0a;
-    background-image: url('./Assets/mypic.jpg');
-    background-size: cover;
+    height: 100vh;
+    /* background-color: #0a0a0a; */
+    /* background-image: url('./Assets/mypic.jpg'); */
+    background: transparent;
+    /* background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
     background-blend-mode: overlay;
-    background-size: 105%;
+    background-size: 105%; */
 }
 
 
@@ -613,11 +625,13 @@ btn-color-2:hover {
     position: relative;
     padding-top: 3rem;
     height: 100vh;
-    background-color: #222222;
-    background-image: url('./Assets/black.jpg');
-    background-size: cover;
+    height: 100vh;
+    /* background-color: #222222; */
+    /* background-image: url('./Assets/black.jpg'); */
+    background: transparent;
+    /* background-size: cover;
     background-repeat: no-repeat;
-    background-blend-mode: overlay;
+    background-blend-mode: overlay; */
     font-family: "Plus Jakarta Sans", sans-serif;
 }
 
@@ -663,13 +677,15 @@ btn-color-2:hover {
 .details-container {
     padding-bottom: 0.8rem;
     flex: 1;
-    background: none;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     border-radius: 1rem;
-    border: #070707 0.1rem solid;
-    border-color: #d2cdc1;
+    border: 1px solid rgba(255, 255, 255, 0.1);
     text-align: center;
     line-height: 1.25rem;
     transition: all 300ms ease;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
 .details-container:hover {
@@ -695,24 +711,30 @@ btn-color-2:hover {
     font-family: "Plus Jakarta Sans", sans-serif;
     font-weight: 300;
     color: #d2cdc1;
-    padding-left: 2rem;
-    padding-right: 11rem;
+    padding: 2rem;
     text-align: left;
     line-height: 1.5rem;
-
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin-right: 11rem;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
 /*SKILLS*/
 
 #skills {
     position: relative;
-    background-image: url(./Assets/bgpic.jpg);
+    /* background-image: url(./Assets/bgpic.jpg); */
     padding: 1rem 0;
     height: 100vh;
-    background-color: #0c0c0c;
-    background-size: cover;
+    /* background-color: #0c0c0c; */
+    background: transparent;
+    /* background-size: cover;
     background-repeat: no-repeat;
-    background-blend-mode: overlay;
+    background-blend-mode: overlay; */
     font-family: "Plus Jakarta Sans", sans-serif;
     background-position: center;
     background-attachment: fixed;
@@ -767,10 +789,11 @@ article h3 {
 .sk-details-container {
     padding-bottom: 0.8rem;
     flex: 1;
-    background: none;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     border-radius: 2.6rem;
-    border: #070707 0.1rem solid;
-    border-color: #d2cdc1;
+    border: 1px solid rgba(255, 255, 255, 0.1);
     text-align: center;
     line-height: 1.25rem;
     margin-left: 11%;
@@ -778,6 +801,7 @@ article h3 {
     margin-top: 2rem;
     padding-bottom: 0.7rem;
     transition: all 300ms ease;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
 .sk-details-container:hover {
@@ -793,14 +817,23 @@ article h3 {
 
 #projects {
     position: relative;
-    background-image: url("./Assets/huji22.jpg");
-    background-color: #1e1e1e;
-    background-size: cover;
+    /* background-image: url("./Assets/huji22.jpg"); */
+    /* background-color: #1e1e1e; */
+    background: transparent;
+    /* background-size: cover;
     background-repeat: no-repeat;
-    background-blend-mode: overlay;
+    background-blend-mode: overlay; */
     font-family: "Plus Jakarta Sans", sans-serif;
     height: fit-content;
     padding-bottom: 3rem;
+}
+
+.contact-subtitle {
+    padding-bottom: 0.3rem;
+}
+
+.contact-title {
+    font-weight: 600;
 }
 
 #projects .title {
@@ -812,6 +845,10 @@ article h3 {
     grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
     grid-gap: 40px;
     margin: 40px 5rem;
+}
+
+.work-item {
+    cursor: pointer;
 }
 
 .work {
@@ -831,7 +868,9 @@ article h3 {
 .layer {
     width: 100%;
     height: 0;
-    background: linear-gradient(rgba(0, 0, 0, 0), #070707);
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
     border-radius: 10px;
     position: absolute;
     left: 0;
@@ -842,7 +881,7 @@ article h3 {
     justify-content: center;
     flex-direction: column;
     text-align: center;
-    transition: height 0.3s;
+    transition: height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .layer h3 {
@@ -895,13 +934,17 @@ article h3 {
     display: inline-block;
     justify-content: center;
     border-radius: 4rem;
-    border: #d2cdc1 0.1rem solid;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     margin-top: 2.6rem;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 1rem;
     padding: 0.4rem;
     transition: all 0.3s ease;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
 .contact-info-upper-container:hover {
@@ -1009,4 +1052,35 @@ footer p {
 
 #all-projects .title {
     font-weight: 600;
+}
+
+/* Scroll Animation */
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateY(50px);
+    transition: all 1s ease-out;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+}
+
+/* Staggered delays for children */
+.delay-100 {
+    transition-delay: 100ms;
+}
+
+.delay-200 {
+    transition-delay: 200ms;
+}
+
+.delay-300 {
+    transition-delay: 300ms;
+}
+
+.delay-400 {
+    transition-delay: 400ms;
 }
