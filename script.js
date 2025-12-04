@@ -95,35 +95,6 @@ hiddenElements.forEach((el) => observer.observe(el));
 
 // window.addEventListener('scroll', changeBG)
 
-function setTheme(theme) {
-    document.body.classList.remove('theme-minimal', 'theme-retro', 'theme-glass');
-    document.body.classList.add('theme-' + theme);
-    localStorage.setItem('selectedTheme', theme);
-}
-
-function initThemeSwitcher() {
-    const switcher = document.getElementById('theme-switcher');
-    const switcherMobile = document.getElementById('theme-switcher-mobile');
-    const savedTheme = localStorage.getItem('selectedTheme') || 'minimal';
-    setTheme(savedTheme);
-    if (switcher) switcher.value = savedTheme;
-    if (switcherMobile) switcherMobile.value = savedTheme;
-    if (switcher) {
-        switcher.addEventListener('change', function () {
-            setTheme(this.value);
-            if (switcherMobile) switcherMobile.value = this.value;
-        });
-    }
-    if (switcherMobile) {
-        switcherMobile.addEventListener('change', function () {
-            setTheme(this.value);
-            if (switcher) switcher.value = this.value;
-        });
-    }
-}
-
-document.addEventListener('DOMContentLoaded', initThemeSwitcher);
-
 
 // Project Modal Logic
 const modal = document.getElementById("project-modal");

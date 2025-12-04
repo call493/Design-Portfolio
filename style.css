@@ -39,6 +39,11 @@
     --color-error: #ef476f;
     --color-warning: #ffd166;
 
+    /* Canvas & Particles */
+    --canvas-bg: radial-gradient(#1a1a1a, #000000);
+    --particle-color: #d2cdc1;
+    --particle-line-color: rgba(210, 205, 193, 0.2);
+
     /* Typography */
     --font-heading: "Syne", sans-serif;
     --font-body: "Plus Jakarta Sans", sans-serif;
@@ -134,24 +139,7 @@
 }
 
 /* Light Theme Variables */
-body.theme-light {
-    --color-bg-primary: #f8f9fa;
-    --color-bg-secondary: #ffffff;
-    --color-bg-tertiary: #e9ecef;
-    --color-bg-overlay: rgba(255, 255, 255, 0.95);
-
-    --color-text-primary: #212529;
-    --color-text-secondary: #495057;
-    --color-text-muted: #6c757d;
-    --color-text-disabled: #adb5bd;
-
-    --color-border: #dee2e6;
-
-    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.15);
-    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.2);
-}
+/* Removed as per user request */
 
 * {
     margin: 0;
@@ -173,7 +161,8 @@ body {
     width: 100%;
     height: 100%;
     z-index: -1;
-    background: radial-gradient(#1a1a1a, #000000);
+    background: var(--canvas-bg);
+    transition: background 0.5s ease;
 }
 
 body::-webkit-scrollbar {
@@ -272,7 +261,7 @@ h6 {
     top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: #d2cdc1;
+    color: var(--color-text-secondary);
 }
 
 .intro-logo {
@@ -335,7 +324,7 @@ a,
 }
 
 a {
-    color: #d2cdc1;
+    color: var(--color-text-secondary);
     text-decoration: none;
     text-decoration-color: #141414;
 }
@@ -399,7 +388,7 @@ nav a:hover {
 .hamburger-icon span {
     width: 100%;
     height: 2px;
-    background-color: #d2cdc1;
+    background-color: var(--color-text-secondary);
     transition: all 0.3 ease-in-out;
 }
 
@@ -419,7 +408,7 @@ nav a:hover {
     padding: 10px;
     text-align: center;
     font-size: 1.5rem;
-    color: #d2cdc1;
+    color: var(--color-text-secondary);
     text-decoration: none;
     transition: all 0.3 ease-in-out;
 }
@@ -516,7 +505,7 @@ section {
 }
 
 .section__text p {
-    color: #a9a69e;
+    color: var(--color-text-muted);
     text-shadow: 0 0 20px rgba(0, 0, 0, 0.744);
 }
 
@@ -538,7 +527,7 @@ section {
     font-weight: 700;
     font-size: 3rem;
     text-align: center;
-    color: #efebe2;
+    color: var(--color-text-primary);
     margin-bottom: 0.6rem;
     text-shadow: 0 0 20px rgba(0, 0, 0, 0.744);
     letter-spacing: 0.05rem;
@@ -581,11 +570,11 @@ section {
 
 .btn-color-1,
 .btn-color-2 {
-    border: #d2cdc1 0.1rem solid;
+    border: var(--color-border) 0.1rem solid;
 }
 
 .btn-color-2 {
-    color: #d2cdc1;
+    color: var(--color-text-secondary);
 }
 
 .btn-color-1:hover,
@@ -602,7 +591,7 @@ section {
 
 .btn-color-1:hover {
     background: purple;
-    color: #d2cdc1;
+    color: var(--color-text-secondary);
     border: purple;
     box-shadow: 0 0 20px rgba(128, 0, 128, 0.3);
 }
@@ -612,7 +601,7 @@ section {
 }
 
 btn-color-2:hover {
-    border: #d2cdc1 0.1rem solid;
+    border: var(--color-border) 0.1rem solid;
 }
 
 .btn-container {
@@ -637,7 +626,7 @@ btn-color-2:hover {
 
 .title2 {
     font-family: "Syne", sans-serif;
-    color: #efebe2;
+    color: var(--color-text-primary);
     margin-top: 0.3rem;
     font-weight: 500;
     font-size: 3rem;
@@ -702,7 +691,7 @@ btn-color-2:hover {
 
 
 .about-headings {
-    color: #d2cdc1;
+    color: var(--color-text-secondary);
     padding-top: 0.3rem;
     padding-bottom: 0.3rem;
 }
@@ -710,7 +699,7 @@ btn-color-2:hover {
 .text-container {
     font-family: "Plus Jakarta Sans", sans-serif;
     font-weight: 300;
-    color: #d2cdc1;
+    color: var(--color-text-secondary);
     padding: 2rem;
     text-align: left;
     line-height: 1.5rem;
@@ -746,7 +735,7 @@ btn-color-2:hover {
 }
 
 .skills-subtitle {
-    color: #d2cdc1;
+    color: var(--color-text-secondary);
     font-weight: 600;
     font-size: 1.75rem;
     margin-bottom: 2rem;
@@ -783,7 +772,7 @@ article .icon {
 }
 
 article h3 {
-    color: #d2cdc1;
+    color: var(--color-text-secondary);
 }
 
 .sk-details-container {
@@ -885,7 +874,7 @@ article h3 {
 }
 
 .layer h3 {
-    color: #d2cdc1;
+    color: var(--color-text-secondary);
     text-shadow: 0 0 40px #070707;
     font-weight: 600;
 }
@@ -922,23 +911,102 @@ article h3 {
 /* CONTACT */
 
 #contact {
-    height: 50vh;
+    height: fit-content;
+    min-height: 80vh;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 2rem;
+    padding-bottom: 4rem;
+}
+
+.contact-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+    max-width: 600px;
+    margin-top: 2rem;
+}
+
+.contact-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 2rem;
+    border-radius: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+.form-group {
+    width: 100%;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 1rem;
+    border: 1px solid var(--color-border);
+    background: rgba(0, 0, 0, 0.2);
+    color: var(--color-text-primary);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--color-accent-primary);
+    box-shadow: 0 0 10px var(--color-accent-glow);
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.form-btn {
+    width: 100%;
+    margin-top: 0.5rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+/* Light mode adjustments for inputs */
+body.light-mode .contact-form {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+body.light-mode .form-group input,
+body.light-mode .form-group textarea {
+    background: rgba(255, 255, 255, 0.5);
+    color: var(--color-text-primary);
+    border-color: var(--color-border);
+}
+
+body.light-mode .form-group input:focus,
+body.light-mode .form-group textarea:focus {
+    background: rgba(255, 255, 255, 0.8);
+    border-color: var(--color-accent-primary);
 }
 
 .contact-info-upper-container {
-    display: inline-block;
+    display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     border-radius: 4rem;
     border: 1px solid rgba(255, 255, 255, 0.1);
     background: rgba(255, 255, 255, 0.03);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    margin-top: 2.6rem;
+    margin-top: 1rem;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 1rem;

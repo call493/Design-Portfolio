@@ -73,17 +73,23 @@ class Particle {
     }
 }
 
+// Helper to get CSS variable value
+function getCssVar(name) {
+    return getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+}
+
 // Create particle array
 function init() {
     particlesArray = [];
-    let numberOfParticles = (canvas.height * canvas.width) / 20000; // Reduced density significantly
+    let numberOfParticles = (canvas.height * canvas.width) / 20000;
+    let color = getCssVar('--particle-color'); // Get initial color
+
     for (let i = 0; i < numberOfParticles; i++) {
-        let size = (Math.random() * 2) + 1; // Smaller particles
+        let size = (Math.random() * 2) + 1;
         let x = (Math.random() * ((innerWidth - size * 2) - (size * 2)) + size * 2);
         let y = (Math.random() * ((innerHeight - size * 2) - (size * 2)) + size * 2);
-        let directionX = (Math.random() * 0.4) - 0.2; // Slower movement
+        let directionX = (Math.random() * 0.4) - 0.2;
         let directionY = (Math.random() * 0.4) - 0.2;
-        let color = '#d2cdc1';
 
         particlesArray.push(new Particle(x, y, directionX, directionY, size, color));
     }
@@ -92,21 +98,47 @@ function init() {
 // Check if particles are close enough to draw line between them
 function connect() {
     let opacityValue = 1;
+    let lineColor = getCssVar('--particle-line-color'); // Get current line color
+
+    // Parse rgba from the variable to inject opacity
+    // Assuming variable is like "rgba(r, g, b, a)" or hex. 
+    // For simplicity, let's just use the variable directly but we need dynamic opacity.
+    // A robust way is to store the base RGB in CSS.
+    // Hack: Let's just use the variable as base.
+
     for (let a = 0; a < particlesArray.length; a++) {
         for (let b = a; b < particlesArray.length; b++) {
             let distance = ((particlesArray[a].x - particlesArray[b].x) * (particlesArray[a].x - particlesArray[b].x)) +
                 ((particlesArray[a].y - particlesArray[b].y) * (particlesArray[a].y - particlesArray[b].y));
             if (distance < (canvas.width / 7) * (canvas.height / 7)) {
                 opacityValue = 1 - (distance / 20000);
-                ctx.strokeStyle = 'rgba(210, 205, 193,' + (opacityValue * 0.2) + ')'; // Much more subtle lines
-                ctx.lineWidth = 0.5; // Thinner lines
+
+                // We need to apply opacity to the CSS variable color.
+                // Since parsing is complex, let's rely on the fact that we updated the variable in CSS
+                // and just set the strokeStyle. But wait, opacity varies by distance.
+                // Let's use the particle color and modify alpha.
+
+                ctx.strokeStyle = lineColor.replace(')', `, ${opacityValue})`).replace('rgb', 'rgba').replace('rgbaa', 'rgba');
+                // This is a bit hacky. Let's try a cleaner approach.
+                // We will just set globalAlpha.
+
+                ctx.globalAlpha = opacityValue;
+                ctx.strokeStyle = lineColor;
+                ctx.lineWidth = 0.5;
                 ctx.beginPath();
                 ctx.moveTo(particlesArray[a].x, particlesArray[a].y);
                 ctx.lineTo(particlesArray[b].x, particlesArray[b].y);
                 ctx.stroke();
+                ctx.globalAlpha = 1; // Reset
             }
         }
     }
+}
+
+// Update particles on theme change
+window.updateParticlesTheme = function () {
+    let newColor = getCssVar('--particle-color');
+    particlesArray.forEach(p => p.color = newColor);
 }
 
 // Animation Loop
