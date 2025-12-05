@@ -1,205 +1,33 @@
-@media screen and (max-width: 1244px) {
-    #about {
-        height: fit-content;
-        padding-bottom: 4rem;
-    }
-
-    #about .section__pic-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .about-pic {
-        width: 300px;
-        height: 300px;
-        margin: auto;
-        margin-top: 2rem;
-        margin-left: 2rem;
-    }
-
-    .about-containers {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        flex: 1;
-        justify-content: center;
-        align-items: center;
-        margin-top: 2rem;
-        padding: 0 2rem;
-        gap: 2rem;
-    }
-
-    .about-containers .details-container {
-        padding-left: 2rem;
-        padding-right: 2rem;
-        min-width: 16rem;
-    }
-
-    #about .text-container {
-        padding: 0 2rem;
-    }
-
-}
-
-@media screen and (max-width: 1140px) {
-
-    #desktop-nav .nav-links {
+/* Additional tiny tweaks layered over main responsive rules */
+@media screen and (max-width: 900px) {
+    .nav-links {
         display: none;
     }
 
-    #desktop-nav {
-        margin: 0;
-        left: 0;
-    }
-
-    #hamburger-nav {
-        display: flex;
-        right: 0;
-        padding-right: 5%;
-    }
-
-    #skills,
-    .skills-details-container {
-        padding-bottom: 3rem;
-    }
-
     #profile {
-        height: auto;
-        padding-top: 7rem;
-        padding-bottom: 2rem
+        padding-top: 72px;
     }
 
-    #profile,
-    .section-container {
-        display: block;
-    }
-
-    section,
-    .section-container {
-        height: fit-content;
-        justify-content: center;
-    }
-
-    section {
-        padding: 5%;
-    }
-
-    .home-pic {
-        width: 275px;
-        height: 275px;
-        margin: auto;
-    }
-
-    .about-pic {
-        width: 300px;
-        height: 300px;
-        margin: auto;
-        margin-top: 2rem;
-
-    }
-
-    .intro {
-        width: 100%;
-    }
-
-    .hamburger-nav {
-        right: 0;
-    }
-
-
-    #skills {
-        height: fit-content;
-    }
-
-    .skills-details-container {
-        padding: 0 8%;
-    }
-
-    .sk-details-container {
-        margin: 0;
-    }
-
-    #contact {
-        height: fit-content;
-    }
-
-    #contact .title {
-        margin-bottom: 2rem;
-    }
-
-    .contact-wrapper {
-        width: 100%;
-        padding: 0;
-    }
-
-    .contact-info-upper-container {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        border-radius: 2rem;
-        margin: 0;
-        margin-top: 2rem;
-        padding: 0;
-    }
-
-    footer {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    footer .nav-links-container,
-    .nav-links {
-        padding: 0;
-        margin: auto;
-    }
-
-    footer nav {
-        padding: 0;
-    }
-
-    #all-projects {
-        width: 100%;
-        margin: 0;
+    .section__pic-container img {
+        max-width: 360px;
+        margin: 0 auto;
     }
 
     .work-list {
-        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-        padding: 0 5%;
-    }
-
-}
-
-@media screen and (max-width: 500px) {
-    .about-containers .details-container {
-        padding-left: 2rem;
-        padding-right: 2rem;
-        max-width: 15rem;
+        margin-top: 16px;
     }
 }
 
-@media screen and (max-width: 500px) {
-    .work-list {
-        margin: 0;
-        grid-template-columns: auto;
+@media screen and (max-width: 600px) {
+    #progress-bar {
+        height: 2px;
     }
 
-    section {
-        width: auto;
-        margin-left: 0;
-        margin-right: 0;
-        padding: 3%;
+    .hero-photo img {
+        border-radius: 14px;
     }
 
-    #contact {
-        margin-top: 1rem;
-    }
-}
-
-@media(prefers-reduced-motion) {
-    .section__text {
-        transition: none;
+    .blog-card h3 {
+        font-size: 18px;
     }
 }

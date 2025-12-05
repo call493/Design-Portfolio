@@ -5,328 +5,307 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Primary Meta Tags -->
-    <title>Braxton Mandara | Graphic Designer, UI/UX Designer & Web Developer</title>
-    <meta name="title" content="Braxton Mandara | Graphic Designer, UI/UX Designer & Web Developer">
-    <meta name="description"
-        content="Award-winning designer and developer specializing in graphic design, UI/UX, web development, and video editing. 3+ years of experience creating stunning digital experiences.">
-    <meta name="keywords"
-        content="Graphic Designer, UI/UX Designer, Web Developer, Video Editor, Braxton Mandara, Portfolio, Kenya Designer">
-    <meta name="author" content="Braxton Mandara">
+    <title>Braxton Mandara | Product Designer & Developer</title>
+    <meta name="description" content="Award-winning designer and developer specializing in graphic design, UI/UX, and web development.">
     <meta name="theme-color" content="#9d4edd">
 
-    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://braxtonmandara.com/">
-    <meta property="og:title" content="Braxton Mandara | Graphic Designer, UI/UX Designer & Web Developer">
-    <meta property="og:description"
-        content="Award-winning designer and developer specializing in graphic design, UI/UX, web development, and video editing.">
-    <meta property="og:image" content="./Assets/me.jpg">
+    <meta property="og:title" content="Braxton Mandara | Product Designer">
+    <meta property="og:description" content="Bridging the gap between product design and engineering.">
+    <meta property="og:image" content="./Assets/Braxton.jpg">
 
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://braxtonmandara.com/">
-    <meta property="twitter:title" content="Braxton Mandara | Graphic Designer, UI/UX Designer & Web Developer">
-    <meta property="twitter:description"
-        content="Award-winning designer and developer specializing in graphic design, UI/UX, web development, and video editing.">
-    <meta property="twitter:image" content="./Assets/me.jpg">
+    <link rel="preload" as="image" href="./Assets/Braxton.jpg">
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="./Assets/Braxlogo.png">
-
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="mediaqueries.css">
-    <link rel="stylesheet" href="modal.css">
-
-    <!-- Preconnect to Google Fonts for performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet">
 
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Braxton Mandara",
-        "url": "https://braxtonmandara.com",
-        "image": "./Assets/me.jpg",
-        "jobTitle": "Graphic Designer, UI/UX Designer & Web Developer",
-        "worksFor": {
-            "@type": "Organization",
-            "name": "Avalanche Revamp"
-        },
-        "alumniOf": {
-            "@type": "EducationalOrganization",
-            "name": "Dedan Kimathi University of Technology"
-        },
-        "sameAs": [
-            "https://www.instagram.com/brax.media/",
-            "https://www.linkedin.com/in/braxton-m/"
-        ]
-    }
-    </script>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .scroll-top-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--accent); /* Matches your theme */
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            pointer-events: none;
+            transform: translateY(20px);
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            z-index: 999;
+            box-shadow: 0 4px 15px var(--accent-glow);
+            color: white;
+        }
+
+        .scroll-top-btn.visible {
+            opacity: 1;
+            pointer-events: all;
+            transform: translateY(0);
+        }
+
+        .scroll-top-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px var(--accent-glow);
+        }
+
+        @media (max-width: 768px) {
+            .scroll-top-btn {
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <canvas id="canvas1"></canvas>
+    <div id="progress-bar"></div>
 
-    <div class="intro">
-        <h1 class="logo-header">
-            <span class="intro-logo">B</span>
-            <span class="intro-logo">R</span>
-            <span class="intro-logo">A</span>
-            <span class="intro-logo">X</span>
-            <span class="intro-logo">T</span>
-            <span class="intro-logo">O</span>
-            <span class="intro-logo">N</span>
-        </h1>
-    </div>
-
-    <nav id="desktop-nav" class="bgcolor">
-        <div class="logo"><img src="./Assets/Braxlogo.png" alt="Bhavya" onclick="location.href='./#profile'">
+    <nav id="desktop-nav">
+        <div class="logo">
+            <a href="#">Braxton<span class="accent">.</span>dev</a>
         </div>
-        <div>
+        <div class="nav-actions">
             <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#about">// about</a></li>
+                <li><a href="#projects">// work</a></li>
+                <li><a href="#contact" class="btn-nav">Let's Chat</a></li>
             </ul>
         </div>
     </nav>
 
     <nav id="hamburger-nav">
-        <div class="logo">Mandara</div>
+        <div class="logo">BM</div>
         <div class="hamburger-menu">
-            <div class="hamburger-icon" onclick="togglemenu()">
+            <div class="hamburger-icon" onclick="togglemenu()" aria-label="Toggle menu">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
             <div class="menu-links" onclick="togglemenu()">
-                <li><a href="#about" onclick="togglemenu()">About</a></li>
-                <li><a href="#skills" onclick="togglemenu()">Skills</a></li>
-                <li><a href="#projects" onclick="togglemenu()">Projects</a></li>
-                <li><a href="#contact" onclick="togglemenu()">Contact</a></li>
+                <li><a href="#about">// about</a></li>
+                <li><a href="#projects">// work</a></li>
+                <li><a href="#contact">// contact</a></li>
             </div>
         </div>
     </nav>
 
     <section id="profile">
-        <div class="section__pic-container">
-            <img class="home-pic" src="./Assets/me.jpg" alt="Bhavya Parmar">
-        </div>
-        <div class="section__text hidden">
-            <p class="section__text__p1">Hello there, I'm</p>
-            <h1 class="title">Braxton Mandara</h1>
-            <p class="section__text__p2">Graphic Designer, UI/UX Designer,<br> Web Developer & Video Editor</p>
-            <div class="btn-container">
-                <button class="btn btn-color-2" onclick="window.open('./Assets/Braxton Mandara CV-1.pdf', '_blank')">
-                    My Resume
-                </button>
-                <button class="btn btn-color-1" onclick="location.href='#contact'">
-                    Get in touch
-                </button>
+        <div class="section__text">
+            <div class="hero-eyebrow">
+                <span class="status-dot"></span> Available for work
             </div>
-            <!-- <div id="socials-container">
-                <img src='./Assets/linkedin.png' alt="My LinkedIn Profile"
-                class="icon" onclick="location.href='https://www.linkedin.com/braxton-m'">
-                <img src='./Assets/insta.png' alt="My Instagram Handle"
-                class="icon" onclick="location.href='https://www.instagram.com/brax.media/'">
-                </div> -->
+            <h1 class="title">
+                Designing<br>
+                <span class="text-gradient">Trustworthy</span><br>
+                Systems.
+            </h1>
+            <p class="section__text__p2">
+                I'm Braxton. I bridge the gap between <span class="highlight">product design</span> and <span class="highlight">engineering</span> to build resilient digital experiences.
+            </p>
+
+            <div class="hero-ctas">
+                <a class="btn-pill primary" href="#projects">View Selected Work</a>
+                <a class="btn-pill secondary" href="mailto:braxtonmandara254@gmail.com">Email Me</a>
+            </div>
+            
+            <div class="hero-metrics">
+                <div class="metric-item">
+                    <span class="metric-number">03+</span>
+                    <span class="metric-label">Years Exp</span>
+                </div>
+                <div class="metric-item">
+                    <span class="metric-number">15+</span>
+                    <span class="metric-label">Projects Shipped</span>
+                </div>
+                <div class="metric-item">
+                    <span class="metric-number">100%</span>
+                    <span class="metric-label">Client Satisfaction</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="hero-photo-container">
+            <div class="hero-glow"></div>
+            <img src="./Assets/Braxton.jpg" alt="Braxton Mandara" class="hero-img">
         </div>
     </section>
 
     <section id="about">
-        <p class="section__text hidden">Get To Know</p>
-        <h1 class="title2 hidden delay-100">About Me</h1>
-        <div class="section-container">
-            <div class="section__pic-container hidden delay-200">
-                <img src="./Assets/Braxton.jpg" alt="Profile Picture" class="about-pic">
-            </div>
-            <div class="about-details-container">
-                <div class="about-containers">
-                    <div class="details-container hidden delay-300">
-                        <img src="./Assets/experience.png" alt="experience icon" class="icon">
-                        <h3 class="about-headings">Experience</h3>
-                        <p><b>3+ years</b><br>Graphic Designing<br>Video Editing<br>UI/UX Designing<br>Web development
-                        </p>
+        <div class="section-header">
+            <p class="section-subtitle">01. THE CONTEXT</p>
+            <h2 class="section-title">About Me</h2>
+        </div>
+
+        <div class="bento-grid">
+            <div class="bento-card timeline-card hidden delay-200">
+                <h3 class="card-title">Journey</h3>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="year">2025</div>
+                        <div class="role">Product Designer · Amazon Pay</div>
                     </div>
-                    <div class="details-container hidden delay-400">
-                        <img src="./Assets/graduation.png" alt="education icon" class="icon">
-                        <h3 class="about-headings">Education</h3>
-                        <p><b>Dedan Kimathi University of Technology, Nyeri</b>
-                            <br>B.Sc. - Computer Science<br>
-                            2024
-                        </p>
+                    <div class="timeline-item">
+                        <div class="year">2024</div>
+                        <div class="role">Web Experience Designer · DSAIL</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="year">2023</div>
+                        <div class="role">Principal Partner · Avalanche Revamp</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="year">2022</div>
+                        <div class="role">Freelance Designer</div>
                     </div>
                 </div>
-                <div class="text-container">
-                    <p>
-                        I'm a graduate from Dedan Kimathi University of Technology, a Principal Partner at Avalanche
-                        Revamp and a Web Experience Designer and Developer at DSAIL. With four years of
-                        experience in graphic design and video editing, I am proficient
-                        in Adobe Photoshop, Illustrator, Premiere Pro, After Effects and Figma. I thrive in personal as
-                        well as
-                        collaborative projects.
-                    </p>
+            </div>
+
+            <div class="bento-card bio-card hidden delay-300">
+                <h3 class="card-title">Bio</h3>
+                <p>
+                    I'm a graduate from <b>Dedan Kimathi University</b> and a Principal Partner at Avalanche Revamp. 
+                    I don't just design screens; I build systems. My background in Computer Science allows me to 
+                    speak the language of developers, ensuring that my designs are not just beautiful, but feasible and scalable.
+                </p>
+            </div>
+
+            <div class="bento-card edu-card hidden delay-400">
+                <div class="card-icon">🎓</div>
+                <div>
+                    <h3 class="card-title">Education</h3>
+                    <p class="card-desc">B.Sc. Computer Science<br>DKUT, 2024</p>
                 </div>
             </div>
         </div>
     </section>
 
     <section id="skills">
-        <p class="section__text hidden">Have a look at my</p>
-        <h1 class="title hidden delay-100">Skills</h1>
-        <div class="skills-details-container">
-            <div class="sk-details-container hidden delay-200">
-                <h2 class="skills-subtitle">Graphic Design</h2>
-                <div class="article-container">
-                    <article>
-                        <img src="./Assets/checkmark.png" alt="skills checkmark" class="icon">
-                        <div>
-                            <h3>Adobe Photoshop</h3>
-                            <p>Experienced</p>
-                        </div>
-                    </article>
-                    <article>
-                        <img src="./Assets/checkmark.png" alt="skills checkmark" class="icon">
-                        <div>
-                            <h3>Adobe Illustrator</h3>
-                            <p>Intermediate</p>
-                        </div>
-                    </article>
-                    <article>
-                        <img src="./Assets/checkmark.png" alt="skills checkmark" class="icon">
-                        <div>
-                            <h3>Figma</h3>
-                            <p>Intermediate</p>
-                        </div>
-                    </article>
+        <div class="section-header">
+            <p class="section-subtitle">02. THE TOOLKIT</p>
+            <h2 class="section-title">Tech Stack</h2>
+        </div>
+
+        <div class="skills-grid hidden delay-200">
+            <div class="skill-category">
+                <h3>Design</h3>
+                <div class="tag-container">
+                    <span class="tech-tag">Figma</span>
+                    <span class="tech-tag">Adobe Ae</span>
+                    <span class="tech-tag">Photoshop</span>
+                    <span class="tech-tag">Illustrator</span>
+                    <span class="tech-tag">Blender</span>
+                    <span class="tech-tag">Prototyping</span>
                 </div>
-                <h2 class="skills-subtitle">Video Editing</h2>
-                <div class="article-container">
-                    <article>
-                        <img src="./Assets/checkmark.png" alt="skills checkmark" class="icon">
-                        <div>
-                            <h3>Adobe Premiere Pro</h3>
-                            <p>Experienced</p>
-                        </div>
-                    </article>
-                    <article>
-                        <img src="./Assets/checkmark.png" alt="skills checkmark" class="icon">
-                        <div>
-                            <h3>Adobe After Effects</h3>
-                            <p>Intermediate</p>
-                        </div>
-                    </article>
+            </div>
+            
+            <div class="skill-category">
+                <h3>Development</h3>
+                <div class="tag-container">
+                    <span class="tech-tag">HTML/CSS</span>
+                    <span class="tech-tag">JavaScript</span>
+                    <span class="tech-tag">React</span>
+                    <span class="tech-tag">Tailwind</span>
+                    <span class="tech-tag">Git</span>
+                    <span class="tech-tag">VS Code</span>
                 </div>
             </div>
         </div>
     </section>
 
     <section id="projects">
-        <p class="section__text hidden">Explore my</p>
-        <h1 class="title hidden delay-100">Work</h1>
-        <div class="work-list">
-            <div class="work-item" onclick="openProject('ASL')">
-                <div class="work hidden delay-200">
-                    <img src="./Assets/ASL.jpg" alt="ASL logo">
-                    <div class="layer">
-                        <h3>ASL Logo</h3>
-                    </div>
+        <div class="section-header">
+            <p class="section-subtitle">03. SELECTED WORK</p>
+            <h2 class="section-title">Projects</h2>
+        </div>
+
+        <div class="work-grid">
+            <div class="work-card hidden delay-200" onclick="openProject('ASL')">
+                <div class="work-img-wrapper">
+                    <img src="./Assets/ASL.jpg" alt="ASL logo" loading="lazy">
                 </div>
-            </div>
-            <div class="work-item" onclick="openProject('Lumisnap')">
-                <div class="work hidden delay-300">
-                    <img src="./Assets/Lumisnap.jpg" alt="Lumisnap">
-                    <div class="layer">
-                        <h3>Lumisnap</h3>
-                    </div>
-                </div>
-            </div>
-            <div class="work-item" onclick="openProject('LaptopOffers')">
-                <div class="work hidden delay-400">
-                    <img src="./Assets/2ndoffers.jpg" alt="Laptop offers">
-                    <div class="layer">
-                        <h3>Laptop Offers</h3>
-                    </div>
+                <div class="work-content">
+                    <div class="work-tags"><span>Branding</span><span>Identity</span></div>
+                    <h3>ASL Logistics Identity</h3>
                 </div>
             </div>
 
+            <div class="work-card hidden delay-300" onclick="openProject('Lumisnap')">
+                <div class="work-img-wrapper">
+                    <img src="./Assets/Lumisnap.jpg" alt="Lumisnap" loading="lazy">
+                </div>
+                <div class="work-content">
+                    <div class="work-tags"><span>UI/UX</span><span>App Design</span></div>
+                    <h3>Lumisnap Interface</h3>
+                </div>
+            </div>
+
+            <div class="work-card hidden delay-400" onclick="openProject('LaptopOffers')">
+                <div class="work-img-wrapper">
+                    <img src="./Assets/2ndoffers.jpg" alt="Laptop offers" loading="lazy">
+                </div>
+                <div class="work-content">
+                    <div class="work-tags"><span>Web Dev</span><span>E-commerce</span></div>
+                    <h3>Laptop Offers Platform</h3>
+                </div>
+            </div>
         </div>
 
+        <div class="center-btn">
+            <a href="projects.html" class="btn-pill secondary">View Archive</a>
         </div>
-        </div>
-        <a href="projects.html">
-            <button class="btn btn-color-2">
-                See more
-            </button></a>
     </section>
 
     <section id="contact">
-        <p class="section__text contact-subtitle hidden">Get In Touch</p>
-        <h1 class="title contact-title hidden delay-100">Contact Me</h1>
+        <p class="section-subtitle">04. WHAT'S NEXT?</p>
+        <h1 class="title contact-title">Let's work together.</h1>
+        <p class="contact-desc">Currently open for new opportunities in Product Design & Front-end Dev.</p>
+        
+        <a href="mailto:braxtonmandara254@gmail.com" class="btn-pill primary big-btn">Say Hello</a>
 
-        <div class="contact-wrapper hidden delay-200">
-
-
-            <!-- Direct Contact Info -->
-            <div class="contact-info-upper-container">
-                <div class="contact-info-container">
-                    <a href="mailto:braxtonmandara254@gmail.com">
-                        <img src="./Assets/email.png" alt="Email icon" class="icon contact-icon">
-                        <p>braxtonmandara254@gmail.com</p>
-                    </a>
-                </div>
-                <div class="contact-info-container">
-                    <a href="https://www.instagram.com/brax.media/">
-                        <img src='./Assets/insta.png' alt="My Instagram Handle" class="icon contact-icon">
-                        <p>DM me on Instagram</p>
-                    </a>
-                </div>
+        <footer>
+            <div class="footer-links">
+                <a href="#" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a href="#" target="_blank" rel="noopener noreferrer">Instagram</a>
+                <a href="#" target="_blank" rel="noopener noreferrer">GitHub</a>
             </div>
-        </div>
-
-        <div class="logo"><img src="./Assets/Braxlogo.png" alt="Bhavya" onclick="location.href='./#profile'">
-        </div>
+            <p class="copyright">© 2025 Braxton Mandara. Built with code.</p>
+        </footer>
     </section>
 
-    <!-- Project Modal -->
-    <div id="project-modal" class="modal">
-        <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <div class="modal-body">
-                <div class="modal-img-container">
-                    <img id="modal-img" src="" alt="Project Image">
-                </div>
-                <div class="modal-text">
-                    <h2 id="modal-title">Project Title</h2>
-                    <p id="modal-desc">Project description goes here.</p>
-                    <div class="modal-tags" id="modal-tags">
-                        <!-- Tags will be injected here -->
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <button id="scrollToTopBtn" class="scroll-top-btn" aria-label="Scroll to top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="12" y1="19" x2="12" y2="5"></line>
+            <polyline points="5 12 12 5 19 12"></polyline>
+        </svg>
+    </button>
 
-    <footer>
-        <nav>
-            <div class="nav-links-container2">
-                <ul class="nav-links">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                </ul>
-            </div>
-        </nav><br>
-        <p>Copyright &#169; 2025 Braxton Mandara</p>
-    </footer>
+    <script src="script.js"></script>
 
-    <script defer src="script.js"></script>
-    <script defer src="particles.js"></script>
+    <script>
+        const scrollBtn = document.getElementById("scrollToTopBtn");
+
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 500) {
+                scrollBtn.classList.add("visible");
+            } else {
+                scrollBtn.classList.remove("visible");
+            }
+        });
+
+        scrollBtn.addEventListener("click", () => {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+    </script>
 </body>
-
 </html>

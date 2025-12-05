@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Writing — Braxton Mandara</title>
+  <meta name="theme-color" content="#9d4edd">
+  <link rel="icon" type="image/png" href="./Assets/Braxlogo.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* --- Page Specific Styles --- 
+       (Inherits variables from style.css) 
+    */
+
+    main {
+      max-width: 800px; /* Optimal reading width */
+      margin: 0 auto;
+      padding: 120px 24px 96px;
+      min-height: 80vh;
+    }
+
+    /* Hero Section */
+    .blog-header {
+      margin-bottom: 64px;
+      border-bottom: 1px solid var(--card-border);
+      padding-bottom: 40px;
+    }
+
+    .blog-eyebrow {
+      font-family: var(--font-mono);
+      color: var(--accent);
+      font-size: 0.85rem;
+      margin-bottom: 16px;
+      display: inline-block;
+    }
+
+    .blog-title {
+      font-size: clamp(3rem, 5vw, 4.5rem);
+      margin-bottom: 16px;
+      letter-spacing: -0.03em;
+    }
+
+    .blog-desc {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      max-width: 500px;
+    }
+
+    /* The Blog List */
+    .blog-list {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .article-link {
+      display: block;
+      padding: 32px 0;
+      border-bottom: 1px solid var(--card-border);
+      transition: 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+      position: relative;
+    }
+
+    /* Hover Effects */
+    .article-link:hover {
+      padding-left: 12px; /* Slight nudge */
+      border-bottom-color: var(--accent);
+    }
+
+    .article-link:hover .article-title {
+      color: var(--accent);
+    }
+
+    .article-link:hover .arrow-icon {
+      transform: translateX(5px) rotate(-45deg);
+      opacity: 1;
+      color: var(--accent);
+    }
+
+    /* Inner Layout */
+    .article-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 12px;
+    }
+
+    .article-meta {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      display: flex;
+      gap: 12px;
+    }
+
+    .category-tag {
+      color: var(--text-main);
+      background: rgba(255,255,255,0.05);
+      padding: 2px 8px;
+      border-radius: 4px;
+    }
+
+    .article-title {
+      font-family: var(--font-heading);
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 8px;
+      transition: color 0.2s;
+    }
+
+    .article-excerpt {
+      color: var(--text-muted);
+      font-size: 1rem;
+      max-width: 90%;
+      line-height: 1.6;
+    }
+
+    /* The Arrow */
+    .arrow-icon {
+      position: absolute;
+      right: 0;
+      top: 36px;
+      font-size: 1.5rem;
+      opacity: 0.3;
+      transform: rotate(-45deg);
+      transition: 0.3s ease;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .article-header {
+        flex-direction: column;
+        gap: 8px;
+      }
+      .arrow-icon {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="progress-bar"></div>
+
+  <nav id="desktop-nav">
+    <div class="logo">
+      <a href="index.html">Braxton<span class="accent">.</span>dev</a>
+    </div>
+    <div class="nav-actions">
+      <ul class="nav-links">
+        <li><a href="index.html#about">// about</a></li>
+        <li><a href="index.html#projects">// work</a></li>
+        <li><a href="#" class="active">// blog</a></li> <li><a href="index.html#contact" class="btn-nav">Let's Chat</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <nav id="hamburger-nav">
+    <div class="logo">BM</div>
+    <div class="hamburger-menu">
+      <div class="hamburger-icon" onclick="togglemenu()">
+        <span></span><span></span><span></span>
+      </div>
+      <div class="menu-links" onclick="togglemenu()">
+        <li><a href="index.html#about">// about</a></li>
+        <li><a href="index.html#projects">// work</a></li>
+        <li><a href="#">// blog</a></li>
+        <li><a href="index.html#contact">// contact</a></li>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <header class="blog-header">
+      <span class="blog-eyebrow">THE ARCHIVE</span>
+      <h1 class="title blog-title">Notes on <span class="text-gradient">Craft</span>.</h1>
+      <p class="blog-desc">Thoughts on product design, engineering systems, and the process of shipping high-quality software.</p>
+    </header>
+
+    <div class="blog-list">
+      
+      <a href="#" class="article-link hidden delay-100">
+        <div class="article-header">
+          <div class="article-meta">
+            <span class="category-tag">Product</span>
+            <span>JAN 2025</span>
+            <span>5 MIN READ</span>
+          </div>
+          <div class="arrow-icon">→</div>
+        </div>
+        <h3 class="article-title">Designing trustworthy payment flows</h3>
+        <p class="article-excerpt">How we shaped low-friction, high-trust experiences for millions of shoppers at Amazon Pay by focusing on micro-copy and timing.</p>
+      </a>
+
+      <a href="#" class="article-link hidden delay-200">
+        <div class="article-header">
+          <div class="article-meta">
+            <span class="category-tag">Process</span>
+            <span>DEC 2024</span>
+            <span>4 MIN READ</span>
+          </div>
+          <div class="arrow-icon">→</div>
+        </div>
+        <h3 class="article-title">From brief to launch in 10 days</h3>
+        <p class="article-excerpt">A fast-track case study on aligning stakeholders, prototyping in code, and shipping with confidence under tight deadlines.</p>
+      </a>
+
+      <a href="#" class="article-link hidden delay-300">
+        <div class="article-header">
+          <div class="article-meta">
+            <span class="category-tag">Engineering</span>
+            <span>NOV 2024</span>
+            <span>3 MIN READ</span>
+          </div>
+          <div class="arrow-icon">→</div>
+        </div>
+        <h3 class="article-title">Microinteractions that earn trust</h3>
+        <p class="article-excerpt">Small motions that guide users and reduce anxiety in checkout, identity verification, and confirmation screens.</p>
+      </a>
+
+      <a href="#" class="article-link hidden delay-400">
+        <div class="article-header">
+          <div class="article-meta">
+            <span class="category-tag">Career</span>
+            <span>OCT 2024</span>
+            <span>6 MIN READ</span>
+          </div>
+          <div class="arrow-icon">→</div>
+        </div>
+        <h3 class="article-title">The designer who codes</h3>
+        <p class="article-excerpt">Why learning React changed my design career and how it bridges the gap between Figma files and production environments.</p>
+      </a>
+
+    </div>
+  </main>
+
+  <footer>
+    <div style="text-align:center; padding: 40px; color: var(--text-muted); border-top: 1px solid var(--card-border); max-width: 800px; margin: 0 auto; font-family: var(--font-mono); font-size: 0.8rem;">
+      © 2025 Braxton Mandara
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
