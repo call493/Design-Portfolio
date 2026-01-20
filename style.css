@@ -372,6 +372,52 @@ section {
 .timeline-item .year { font-family: var(--font-mono); color: var(--accent); font-size: 0.9rem; margin-bottom: 4px; }
 .timeline-item .role { font-weight: 500; font-size: 1rem; color: var(--text-main); }
 
+.shipped-links {
+    margin-top: 12px;
+    padding: 14px;
+    border: 1px solid var(--card-border);
+    border-radius: var(--radius-sm);
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.shipped-links-title {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 10px;
+    letter-spacing: 0.05em;
+}
+
+.shipped-links-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.shipped-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 10px;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    color: var(--text-main);
+    background: rgba(255, 255, 255, 0.01);
+}
+
+.shipped-link:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    background: var(--accent-dim);
+}
+
+.shipped-link__favicon {
+    width: 18px;
+    height: 18px;
+    border-radius: 4px;
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
 /* -----------------------------------------------------------
    7. SKILLS (Tags)
 ----------------------------------------------------------- */
